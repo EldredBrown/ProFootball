@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}New League Season{% endblock %}
+
+{% block content %}
+    <h1>Create a New League Season</h1>
+    <form method="POST">
+        <table>
+            {{ form }}
+        </table>
+        {% csrf_token %}
+        <button type="submit">Create</button>
+    </form>
+{% endblock %}

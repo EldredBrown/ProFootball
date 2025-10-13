@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e5127994-3879-4148-80e9-e3f154c82425": {
+      "ProjectGuid": "e5127994-3879-4148-80e9-e3f154c82425",
+      "DisplayName": "EldredBrown.ProFootball.NETCore.Services",
+      "ColorIndex": 0
+    },
+    "928495bf-9c55-46da-a4b4-9f86e1dd3451": {
+      "ProjectGuid": "928495bf-9c55-46da-a4b4-9f86e1dd3451",
+      "DisplayName": "EldredBrown.ProFootball.AspNetCore.MvcWebApp",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "adf05d87-ff34-40f7-a026-be61fd89927a": {
+      "ProjectGuid": "adf05d87-ff34-40f7-a026-be61fd89927a",
+      "DisplayName": "EldredBrown.ProFootball.NETCore.Data",
+      "ColorIndex": 2
+    },
+    "b74bb8b0-02b5-4726-8894-ff9bb38f931d": {
+      "ProjectGuid": "b74bb8b0-02b5-4726-8894-ff9bb38f931d",
+      "DisplayName": "EldredBrown.ProFootball.NETCore.Services.Tests",
+      "ColorIndex": 3
+    },
+    "bcd36b4a-62b0-4920-9095-5d5c0f69fa81": {
+      "ProjectGuid": "bcd36b4a-62b0-4920-9095-5d5c0f69fa81",
+      "DisplayName": "EldredBrown.ProFootball.AspNetCore.WebApiApp",
+      "ColorIndex": 4
+    },
+    "2fd6ed32-04fd-455a-8ff0-554584b21242": {
+      "ProjectGuid": "2fd6ed32-04fd-455a-8ff0-554584b21242",
+      "DisplayName": "EldredBrown.ProFootball.NETCore.WpfApp",
+      "ColorIndex": 5
+    },
+    "3116a659-7dd2-48a4-986e-a01bd02411a5": {
+      "ProjectGuid": "3116a659-7dd2-48a4-986e-a01bd02411a5",
+      "DisplayName": "EldredBrown.ProFootball.AspNetCore.WebApiApp.Tests",
+      "ColorIndex": 6
+    },
+    "d7651c6d-02d2-41dc-90c3-ac46dd2f3a52": {
+      "ProjectGuid": "d7651c6d-02d2-41dc-90c3-ac46dd2f3a52",
+      "DisplayName": "EldredBrown.ProFootball.AspNetCore.MvcWebApp.Tests",
+      "ColorIndex": 7
+    },
+    "b18f1f1d-f528-49c7-95c6-b143ea2eaf9b": {
+      "ProjectGuid": "b18f1f1d-f528-49c7-95c6-b143ea2eaf9b",
+      "DisplayName": "EldredBrown.ProFootball.NETCore.WpfApp.Tests",
+      "ColorIndex": 8
+    },
+    "6d9e1b16-82c9-47dd-a10b-fd1b393abc66": {
+      "ProjectGuid": "6d9e1b16-82c9-47dd-a10b-fd1b393abc66",
+      "DisplayName": "EldredBrown.ProFootball.NETCore.Data.Tests",
+      "ColorIndex": 9
+    }
+  },
+  "NextColorIndex": 10
+}

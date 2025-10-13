@@ -1,0 +1,200 @@
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.exe
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.deps.json
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.runtimeconfig.json
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.runtimeconfig.dev.json
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Xceed.Wpf.AvalonDock.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Xceed.Wpf.Toolkit.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Expression.Interactions.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\System.Windows.Interactivity.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Data.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Data.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.csproj.AssemblyReference.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Resources\AppResources.baml
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Windows\GamePredictor\GamePredictorWindow.baml
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Main\MainWindow.g.cs
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\UserControls\Rankings\RankingsControl.g.cs
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\UserControls\SeasonStandings\SeasonStandingsControl.g.cs
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\UserControls\TeamSeasons\TeamSeasonsControl.g.cs
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Windows\GameFinder\GameFinderWindow.g.cs
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Windows\GamePredictor\GamePredictorWindow.g.cs
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Windows\Games\GamesWindow.g.cs
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp_MarkupCompile.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp_MarkupCompile.lref
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Main\MainWindow.baml
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\UserControls\Rankings\RankingsControl.baml
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\UserControls\SeasonStandings\SeasonStandingsControl.baml
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\UserControls\TeamSeasons\TeamSeasonsControl.baml
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Windows\GameFinder\GameFinderWindow.baml
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Windows\Games\GamesWindow.baml
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.g.resources
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.AssemblyInfoInputs.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.AssemblyInfo.cs
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.csproj.CoreCompileInputs.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.csproj.CopyComplete
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.genruntimeconfig.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.exe
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.deps.json
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.runtimeconfig.json
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.runtimeconfig.dev.json
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Xceed.Wpf.AvalonDock.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Xceed.Wpf.Toolkit.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Expression.Interactions.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\System.Windows.Interactivity.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Data.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Data.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.csproj.AssemblyReference.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Resources\AppResources.baml
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Windows\GamePredictor\GamePredictorWindow.baml
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Main\MainWindow.g.cs
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\UserControls\Rankings\RankingsControl.g.cs
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\UserControls\SeasonStandings\SeasonStandingsControl.g.cs
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\UserControls\TeamSeasons\TeamSeasonsControl.g.cs
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Windows\GameFinder\GameFinderWindow.g.cs
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Windows\GamePredictor\GamePredictorWindow.g.cs
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Windows\Games\GamesWindow.g.cs
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\App.g.cs
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp_MarkupCompile.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp_MarkupCompile.lref
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Main\MainWindow.baml
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\UserControls\Rankings\RankingsControl.baml
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\UserControls\SeasonStandings\SeasonStandingsControl.baml
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\UserControls\TeamSeasons\TeamSeasonsControl.baml
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Windows\GameFinder\GameFinderWindow.baml
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\Windows\Games\GamesWindow.baml
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.g.resources
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.AssemblyInfoInputs.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.AssemblyInfo.cs
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.csproj.CoreCompileInputs.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.csproj.CopyComplete
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.WpfApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.WpfApp.genruntimeconfig.cache

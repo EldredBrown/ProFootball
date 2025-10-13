@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Leagues{% endblock %}
+
+{% block content %}
+    <h2>Leagues</h2>
+    <ul>
+        {% for league in leagues %}
+            <li>
+                {{ league }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

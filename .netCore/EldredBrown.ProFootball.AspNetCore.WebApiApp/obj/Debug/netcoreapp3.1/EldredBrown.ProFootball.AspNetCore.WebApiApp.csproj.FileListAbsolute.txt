@@ -1,0 +1,296 @@
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.exe
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.deps.json
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.runtimeconfig.json
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.runtimeconfig.dev.json
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Data.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Data.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.csproj.AssemblyReference.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.Properties.Settings.resources
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.csproj.GenerateResource.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.AssemblyInfoInputs.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.AssemblyInfo.cs
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.csproj.CoreCompileInputs.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\staticwebassets\EldredBrown.ProFootball.AspNetCore.WebApiApp.StaticWebAssets.Manifest.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.RazorTargetAssemblyInfo.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.csproj.CopyComplete
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.genruntimeconfig.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.exe
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.deps.json
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.runtimeconfig.json
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.runtimeconfig.dev.json
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Humanizer.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Data.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Data.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.csproj.AssemblyReference.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.Properties.Settings.resources
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.csproj.GenerateResource.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.AssemblyInfoInputs.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.AssemblyInfo.cs
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.csproj.CoreCompileInputs.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.MvcApplicationPartsAssemblyInfo.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\staticwebassets\EldredBrown.ProFootball.AspNetCore.WebApiApp.StaticWebAssets.Manifest.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.RazorTargetAssemblyInfo.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.csproj.CopyComplete
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.AspNetCore.WebApiApp\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.AspNetCore.WebApiApp.genruntimeconfig.cache

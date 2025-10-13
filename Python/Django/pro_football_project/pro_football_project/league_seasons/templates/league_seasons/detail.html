@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}League Season: {{league_season.league_name}} - {{league_season.season_year}}{% endblock %}
+
+{% block content %}
+    <h1>{{league_season.league_name}} - {{league_season.season_year}}</h1>
+    <p>
+        This league_season has {{league_season.total_points}} points / {{league_season.total_games}} games
+        for a scoring average of {{league_season.average_points}} ppg.
+    </p>
+    <a href="{% url 'welcome' %}">Home</a>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Pro Football Project!</h1>
+    <p>
+        This is an application for the Pro Football Project.
+    </p>
+    <img src="{% static 'website/football.jpeg' %}" width="100px">
+    <h2>League Seasons</h2>
+    <ul>
+        {% for league_season in league_seasons %}
+            <li>
+                <a href="/league_seasons/{{league_season.id}}">
+                    {{ league_season.league_name }} - {{ league_season.season_year }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{% url 'leagues' %}">Leagues List</a>
+    </p>
+    <p>
+        <a href="{% url 'seasons' %}">Seasons List</a>
+    </p>
+{% endblock %}

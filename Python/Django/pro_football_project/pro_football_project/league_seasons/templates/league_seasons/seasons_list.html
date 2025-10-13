@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Seasons{% endblock %}
+
+{% block content %}
+    <h2>Seasons</h2>
+    <ul>
+        {% for season in seasons %}
+            <li>
+                {{ season }}
+            </li>
+        {% endfor %}
+    </ul>
+    <table>
+        {% if is_paginated %}
+            <tr class="paginated">
+                {% if page_obj.has_previous %}
+                    <td>
+                        <span><a href="?page={{ page_obj.previous_page_number }}">Previous</a></span>
+                    </td>
+                {% endif %}
+                <td class="">
+                    <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+                </td>
+                {% for i in items.paginator.page_range %}
+                    {% if items.number == i %}
+                        <td class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></td>
+                    {% else %}
+                        <td><a href="?page={{ i }}">{{ i }}</a></td>
+                    {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                    <td>
+                        <span><a href="?page={{ page_obj.next_page_number }}">Next</a></span>
+                    </td>
+                {% endif %}
+            </tr>
+        {% endif %}
+    </table>
+{% endblock %}

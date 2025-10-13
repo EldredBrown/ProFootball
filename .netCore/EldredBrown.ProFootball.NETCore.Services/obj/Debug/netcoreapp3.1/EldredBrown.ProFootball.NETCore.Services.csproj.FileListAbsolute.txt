@@ -1,0 +1,31 @@
+C:\Users\eldredbr\Source\Repos\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.csproj.AssemblyReference.cache
+C:\Users\eldredbr\Source\Repos\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eldredbr\Source\Repos\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.AssemblyInfoInputs.cache
+C:\Users\eldredbr\Source\Repos\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.AssemblyInfo.cs
+C:\Users\eldredbr\Source\Repos\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.csproj.CoreCompileInputs.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.deps.json
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Data.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Data.pdb
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.csproj.AssemblyReference.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.AssemblyInfoInputs.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.AssemblyInfo.cs
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.csproj.CoreCompileInputs.cache
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.csproj.CopyComplete
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.dll
+C:\Users\eldredbr\OneDrive\CSE\Visual Studio 2022\Projects\profootball.netcore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.deps.json
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Data.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\bin\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Data.pdb
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.csproj.AssemblyReference.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.AssemblyInfoInputs.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.AssemblyInfo.cs
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.csproj.CoreCompileInputs.cache
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.csproj.CopyComplete
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.dll
+D:\Source Code\Repositories\ProFootball\.NETCore\EldredBrown.ProFootball.NETCore.Services\obj\Debug\netcoreapp3.1\EldredBrown.ProFootball.NETCore.Services.pdb
