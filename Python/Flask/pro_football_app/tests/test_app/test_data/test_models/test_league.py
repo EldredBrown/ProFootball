@@ -21,7 +21,7 @@ def test_validate_not_empty_when_short_name_is_none_should_raise_value_error():
 
     # Assert
     assert isinstance(err.value, ValueError)
-    assert err.value.args[0] == "short_name is required."
+    assert err.value.args[0] == "year is required."
 
 
 def test_validate_not_empty_when_short_name_is_empty_string_should_raise_value_error():
@@ -34,7 +34,7 @@ def test_validate_not_empty_when_short_name_is_empty_string_should_raise_value_e
 
     # Assert
     assert isinstance(err.value, ValueError)
-    assert err.value.args[0] == "short_name is required."
+    assert err.value.args[0] == "year is required."
 
 
 @patch('app.data.models.league.League.validate_is_unique')
@@ -49,7 +49,7 @@ def test_validate_not_empty_when_short_name_is_not_empty_string_should_validate_
 
     # Assert
     fake_validate_is_unique.assert_called_once_with(
-        'short_name', 'APFA', error_message=f"Row with short_name=APFA already exists in the League table."
+        'year', 'APFA', error_message=f"Row with year=APFA already exists in the League table."
     )
 
 
@@ -64,7 +64,7 @@ def test_validate_is_unique_when_short_name_is_not_unique_should_raise_value_err
             test_league = League(short_name="APFA")
 
     # Assert
-    assert err.value.args[0] == f"Row with short_name=APFA already exists in the League table."
+    assert err.value.args[0] == f"Row with year=APFA already exists in the League table."
 
 
 def test_validate_is_unique_when_short_name_is_unique_should_not_raise_value_error():
@@ -216,7 +216,7 @@ def _init_and_populate_test_db():
     )
     c = conn.cursor()
     c.execute('''
-        INSERT INTO League (short_name, long_name, first_season_id)
+        INSERT INTO League (year, long_name, first_season_id)
             VALUES ("APFA", "American Professional Football Association", 1)
     ''')
     conn.commit()

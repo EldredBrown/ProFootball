@@ -21,7 +21,7 @@ def test_validate_not_empty_when_short_name_is_none_should_raise_value_error():
 
     # Assert
     assert isinstance(err.value, ValueError)
-    assert err.value.args[0] == "short_name is required."
+    assert err.value.args[0] == "year is required."
 
 
 def test_validate_not_empty_when_short_name_is_empty_string_should_raise_value_error():
@@ -34,7 +34,7 @@ def test_validate_not_empty_when_short_name_is_empty_string_should_raise_value_e
 
     # Assert
     assert isinstance(err.value, ValueError)
-    assert err.value.args[0] == "short_name is required."
+    assert err.value.args[0] == "year is required."
 
 
 @patch('app.data.models.conference.Conference.validate_is_unique')
@@ -49,7 +49,7 @@ def test_validate_not_empty_when_short_name_is_not_empty_string_should_validate_
 
     # Assert
     fake_validate_is_unique.assert_called_once_with(
-        'short_name', 'AAFC', error_message=f"Row with short_name=AAFC already exists in the Conference table."
+        'year', 'AAFC', error_message=f"Row with year=AAFC already exists in the Conference table."
     )
 
 
@@ -64,7 +64,7 @@ def test_validate_is_unique_when_short_name_is_not_unique_should_raise_value_err
             test_conference = Conference(short_name="AAFC")
 
     # Assert
-    assert err.value.args[0] == f"Row with short_name=AAFC already exists in the Conference table."
+    assert err.value.args[0] == f"Row with year=AAFC already exists in the Conference table."
 
 
 def test_validate_is_unique_when_short_name_is_unique_should_not_raise_value_error():
@@ -170,7 +170,7 @@ def test_validate_not_empty_when_league_id_is_none_should_raise_value_error():
 
     # Assert
     assert isinstance(err.value, ValueError)
-    assert err.value.args[0] == "league_id is required."
+    assert err.value.args[0] == "team_id is required."
 
 
 @patch('app.data.models.conference.Conference.validate_is_unique')
@@ -189,8 +189,8 @@ def test_validate_not_empty_when_league_id_is_zero_should_validate_league_id_is_
     # Assert
     assert test_err is None
     fake_validate_is_unique.assert_called_once_with(
-        'league_id', 0,
-        error_message=f"Row with league_id=0 already exists in the Conference table."
+        'team_id', 0,
+        error_message=f"Row with team_id=0 already exists in the Conference table."
     )
 
 
@@ -210,8 +210,8 @@ def test_validate_not_empty_when_league_id_is_greater_than_zero_should_validate_
     # Assert
     assert test_err is None
     fake_validate_is_unique.assert_called_once_with(
-        'league_id', 1,
-        error_message=f"Row with league_id=1 already exists in the Conference table."
+        'team_id', 1,
+        error_message=f"Row with team_id=1 already exists in the Conference table."
     )
 
 
@@ -226,7 +226,7 @@ def test_validate_is_unique_when_league_id_is_not_unique_should_raise_value_erro
             test_conference = Conference(league_id=1)
 
     # Assert
-    assert err.value.args[0] == f"Row with league_id=1 already exists in the Conference table."
+    assert err.value.args[0] == f"Row with team_id=1 already exists in the Conference table."
 
 
 def test_validate_is_unique_when_league_id_is_unique_should_not_raise_value_error():
@@ -303,7 +303,7 @@ def _init_and_populate_test_db():
     )
     c = conn.cursor()
     c.execute('''
-        INSERT INTO Conference (short_name, long_name, league_id, first_season_id)
+        INSERT INTO Conference (year, long_name, team_id, first_season_id)
             VALUES ("AAFC", "All-American Football Conference", 1, 1)
     ''')
     conn.commit()

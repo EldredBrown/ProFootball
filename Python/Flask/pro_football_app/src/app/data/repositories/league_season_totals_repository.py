@@ -17,7 +17,7 @@ class LeagueSeasonTotalsRepository:
 
     def get_league_season_totals(self, league_name: str, season_year: int) -> LeagueSeasonTotals:
         """
-        Gets the league_season_totals in the data store with the specified league_id and season_id.
+        Gets the league_season_totals in the data store with the specified team_id and season_id.
 
         :return: The fetched league_season_totals.
         """

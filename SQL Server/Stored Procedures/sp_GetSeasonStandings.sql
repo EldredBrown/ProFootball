@@ -9,11 +9,14 @@ GO
 -- Create date: 2017-01-14
 -- Description:	A procedure to return a conference's season standings
 -- Revision history:
---	2025-10-02	Eldred Brown	Changed variable names to snake_case to make more Pythonic
+--	2025-10-02	Eldred Brown
+--	*	Changed variable names to snake_case to make more Pythonic
+--	2025-10-14	Eldred Brown
+--	*	Referenced season data by id, not by year
 -- =============================================
 CREATE PROCEDURE dbo.sp_GetSeasonStandings
 	-- Add the parameters for the stored procedure here
-	@season_year smallint,
+	@season_id int,
 	@group_by_division bit
 AS
 BEGIN
@@ -24,9 +27,9 @@ BEGIN
 	BEGIN
 		-- Insert statements for procedure here
 		SELECT
-			team_name as team,
-			conference_name as conference,
-			division_name as division,
+			team.name as team,
+			--conference.short_name as conference,
+			--division.name as division,
 			wins,
 			losses,
 			ties,
@@ -47,17 +50,23 @@ BEGIN
 					WHEN games = 0 THEN NULL
 					ELSE (CAST(points_against as float) / games)
 				END
-		FROM dbo.TeamSeason
-		WHERE season_year = @season_year
+		FROM dbo.TeamSeason AS ts
+			--INNER JOIN dbo.Conference AS conference
+			--	ON ts.conference_id = conference.id
+			--INNER JOIN dbo.Division AS division
+			--	ON ts.division_id = division.id
+			INNER JOIN dbo.Team as team
+				ON ts.team_id = team.id
+		WHERE season_id = @season_id
 		ORDER BY
-			CASE
-				WHEN @group_by_division = 0 THEN conference_name
-				WHEN @group_by_division = 1 THEN division_name
-			END,
+			--CASE
+			--	WHEN @group_by_division = 0 THEN conference.short_name
+			--	WHEN @group_by_division = 1 THEN division.name
+			--END,
 			winning_percentage DESC,
 			wins DESC,
 			losses ASC,
-			team_name ASC
+			team.name ASC
 
 	END
 END

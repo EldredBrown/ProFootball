@@ -1,5 +1,7 @@
 from typing import List
 
+from sqlalchemy import exists
+
 from app.data.models.season import Season
 from app.data.sqla import sqla
 
@@ -23,18 +25,31 @@ class SeasonRepository:
         """
         return Season.query.all()
 
-    def get_season(self, year: int) -> Season | None:
+    def get_season(self, id: int) -> Season | None:
         """
         Gets the season in the data store with the specified id.
 
-        :param year: The id of the season to fetch.
+        :param id: The id of the season to fetch.
 
         :return: The fetched season.
         """
         seasons = self.get_seasons()
         if len(seasons) == 0:
             return None
-        return Season.query.get(year)
+        return Season.query.get(id)
+
+    def get_season_by_year(self, year: int) -> Season | None:
+        """
+        Gets the season in the data store with the specified id.
+
+        :param year: The year of the season to fetch.
+
+        :return: The fetched season.
+        """
+        seasons = self.get_seasons()
+        if len(seasons) == 0:
+            return None
+        return Season.query.filter_by(year=year).first()
 
     def add_season(self, season: Season) -> Season:
         """
@@ -69,38 +84,37 @@ class SeasonRepository:
 
         :return: The updated season.
         """
-        if not self.season_exists(season.year):
+        if not self.season_exists(season.id):
             return season
 
-        season_to_update = self.get_season(season.year)
-        season_to_update.num_of_weeks_scheduled = season.num_of_weeks_scheduled
-        season_to_update.num_of_weeks_completed = season.num_of_weeks_completed
+        season_to_update = self.get_season(season.id)
+        season_to_update.year = season.year
         sqla.session.add(season_to_update)
         sqla.session.commit()
         return season
 
-    def delete_season(self, year: int) -> Season | None:
+    def delete_season(self, id: int) -> Season | None:
         """
         Deletes a season from the data store.
 
-        :param year: The id of the season to delete.
+        :param id: The id of the season to delete.
 
         :return: The deleted season.
         """
-        if not self.season_exists(year):
+        if not self.season_exists(id):
             return None
 
-        season = self.get_season(year)
+        season = self.get_season(id)
         sqla.session.delete(season)
         sqla.session.commit()
         return season
 
-    def season_exists(self, year: int) -> bool:
+    def season_exists(self, id: int) -> bool:
         """
         Checks to verify whether a specific season exists in the data store.
 
-        :param year: The id of the season to verify.
+        :param id: The id of the season to verify.
 
         :return: True if the season with the specified id exists in the data store; otherwise false.
         """
-        return self.get_season(year) is not None
+        return sqla.session.query(exists().where(Season.id == id)).scalar()

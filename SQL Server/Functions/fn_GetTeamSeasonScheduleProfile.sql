@@ -11,13 +11,16 @@ GO
 -- Revision History:
 --	2017-01-05	Eldred Brown
 --	*	Added parameter to restrict results to a single season
---	2025-10-02	Eldred Brown	Changed variable names to snake_case to make more Pythonic
+--	2025-10-02	Eldred Brown
+--	*	Changed variable names to snake_case to make more Pythonic
+--	2025-10-14	Eldred Brown
+--	*	Referenced team and season data by id, not by name or year
 -- =============================================
 CREATE FUNCTION dbo.fn_GetTeamSeasonScheduleProfile 
 (	
 	-- Add the parameters for the function here
-	@team_name varchar(50),
-	@season_year smallint
+	@team_id int,
+	@season_id int
 )
 RETURNS @tbl TABLE
 (
@@ -50,8 +53,8 @@ BEGIN
 		tssd.weighted_games,
 		tssd.weighted_points_for,
 		tssd.weighted_points_against
-	FROM dbo.fn_GetTeamSeasonGames(@team_name, @season_year) AS tsg
-		INNER JOIN dbo.fn_GetTeamSeasonScheduleData(@team_name, @season_year) AS tssd
+	FROM dbo.fn_GetTeamSeasonGames(@team_id, @season_id) AS tsg
+		INNER JOIN dbo.fn_GetTeamSeasonScheduleData(@team_id, @season_id) AS tssd
 			ON tsg.id = tssd.id
 
 	RETURN

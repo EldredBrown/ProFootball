@@ -95,7 +95,7 @@ def test_validate_not_empty_when_league_id_is_none_should_raise_value_error():
 
     # Assert
     assert isinstance(err.value, ValueError)
-    assert err.value.args[0] == "league_id is required."
+    assert err.value.args[0] == "team_id is required."
 
 
 @patch('app.data.models.division.Division.validate_is_unique')
@@ -114,8 +114,8 @@ def test_validate_not_empty_when_league_id_is_zero_should_validate_league_id_is_
     # Assert
     assert test_err is None
     fake_validate_is_unique.assert_called_once_with(
-        'league_id', 0,
-        error_message=f"Row with league_id=0 already exists in the Division table."
+        'team_id', 0,
+        error_message=f"Row with team_id=0 already exists in the Division table."
     )
 
 
@@ -135,8 +135,8 @@ def test_validate_not_empty_when_league_id_is_greater_than_zero_should_validate_
     # Assert
     assert test_err is None
     fake_validate_is_unique.assert_called_once_with(
-        'league_id', 1,
-        error_message=f"Row with league_id=1 already exists in the Division table."
+        'team_id', 1,
+        error_message=f"Row with team_id=1 already exists in the Division table."
     )
 
 
@@ -151,7 +151,7 @@ def test_validate_is_unique_when_league_id_is_not_unique_should_raise_value_erro
             test_division = Division(league_id=1)
 
     # Assert
-    assert err.value.args[0] == f"Row with league_id=1 already exists in the Division table."
+    assert err.value.args[0] == f"Row with team_id=1 already exists in the Division table."
 
 
 def test_validate_is_unique_when_league_id_is_unique_should_not_raise_value_error():
@@ -228,7 +228,7 @@ def _init_and_populate_test_db():
     )
     c = conn.cursor()
     c.execute('''
-        INSERT INTO Division (name, league_id, conference_id, first_season_id)
+        INSERT INTO Division (name, team_id, conference_id, first_season_id)
             VALUES ("NFC East", 1, 1, 1)
     ''')
     conn.commit()

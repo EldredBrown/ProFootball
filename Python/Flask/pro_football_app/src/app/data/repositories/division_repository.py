@@ -1,5 +1,7 @@
 from typing import List
 
+from sqlalchemy import exists
+
 from app.data.models.division import Division
 from app.data.sqla import sqla
 
@@ -23,18 +25,31 @@ class DivisionRepository:
         """
         return Division.query.all()
 
-    def get_division(self, name: str) -> Division | None:
+    def get_division(self, id: int) -> Division | None:
         """
-        Gets the division in the data store with the specified name.
+        Gets the division in the data store with the specified id.
 
-        :param name: The name of the division to fetch.
+        :param id: The id of the division to fetch.
 
         :return: The fetched division.
         """
         divisions = self.get_divisions()
         if len(divisions) == 0:
             return None
-        return Division.query.get(name)
+        return Division.query.get(id)
+
+    def get_division_by_name(self, name: str) -> Division | None:
+        """
+        Gets the division in the data store with the specified id.
+
+        :param name: The year of the division to fetch.
+
+        :return: The fetched division.
+        """
+        divisions = self.get_divisions()
+        if len(divisions) == 0:
+            return None
+        return Division.query.filter_by(name=name).first()
 
     def add_division(self, division: Division) -> Division:
         """
@@ -69,10 +84,11 @@ class DivisionRepository:
 
         :return: The updated division.
         """
-        if not self.division_exists(division.name):
+        if not self.division_exists(division.id):
             return division
 
-        division_to_update = self.get_division(division.name)
+        division_to_update = self.get_division(division.id)
+        division_to_update.name = division.name
         division_to_update.league_id = division.league_id
         division_to_update.conference_id = division.conference_id
         division_to_update.first_season_id = division.first_season_id
@@ -81,28 +97,28 @@ class DivisionRepository:
         sqla.session.commit()
         return division
 
-    def delete_division(self, name: str) -> Division | None:
+    def delete_division(self, id: int) -> Division | None:
         """
         Deletes a division from the data store.
 
-        :param name: The name of the division to delete.
+        :param id: The id of the division to delete.
 
         :return: The deleted division.
         """
-        if not self.division_exists(name):
+        if not self.division_exists(id):
             return None
 
-        division = self.get_division(name)
+        division = self.get_division(id)
         sqla.session.delete(division)
         sqla.session.commit()
         return division
 
-    def division_exists(self, name: str) -> bool:
+    def division_exists(self, id: int) -> bool:
         """
         Checks to verify whether a specific division exists in the data store.
 
-        :param name: The name of the division to verify.
+        :param id: The id of the division to verify.
 
-        :return: True if the division with the specified name exists in the data store; otherwise false.
+        :return: True if the division with the specified id exists in the data store; otherwise false.
         """
-        return self.get_division(name) is not None
+        return sqla.session.query(exists().where(Division.id == id)).scalar()

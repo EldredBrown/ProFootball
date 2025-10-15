@@ -21,12 +21,12 @@ class League(sqla.Model):
     league_seasons = sqla.relationship('Season', secondary='league_season', lazy=True)
     team_seasons = sqla.relationship('TeamSeason', cascade='save-update, delete, delete-orphan, merge')
 
-    @validates('short_name', 'long_name', 'first_season_id')
+    @validates('year', 'long_name', 'first_season_id')
     def validate_not_empty(self, key, value):
         if not value and value != 0:
             raise ValueError(f"{key} is required.")
 
-        if key in ('short_name', 'long_name'):
+        if key in ('year', 'long_name'):
             self.validate_is_unique(
                 key, value, error_message=f"Row with {key}={value} already exists in the League table."
             )

@@ -14,13 +14,16 @@ GO
 --	*	Added logic to prevent DivisionByZero exceptions.
 --	2017-01-05	Eldred Brown
 --	*	Added parameter to restrict results to a single season
---	2025-10-02	Eldred Brown	Changed variable names to snake_case to make more Pythonic
+--	2025-10-02	Eldred Brown
+--	*	Changed variable names to snake_case to make more Pythonic
+--	2025-10-14	Eldred Brown
+--	*	Referenced team and season data by id, not by name or year
 -- =============================================
 CREATE FUNCTION dbo.fn_GetTeamSeasonScheduleData 
 (	
 	-- Add the parameters for the function here
-	@team_name varchar(50),
-	@season_year smallint
+	@team_id int,
+	@season_id int
 )
 RETURNS @tbl TABLE
 (
@@ -55,10 +58,12 @@ BEGIN
 			(ts.points_for - tsg.points_against) AS weighted_points_for,
 			(ts.points_against - tsg.points_for) AS weighted_points_against
 		FROM dbo.TeamSeason AS ts
-			INNER JOIN dbo.fn_GetTeamSeasonGames(@team_name, @season_year) AS tsg
-				ON ts.team_name = tsg.opponent
+			INNER JOIN dbo.Team AS team
+				ON team.id = ts.team_id
+			INNER JOIN dbo.fn_GetTeamSeasonGames(@team_id, @season_id) AS tsg
+				ON team.name = tsg.opponent
 		WHERE
-			ts.season_year = @season_year
+			ts.season_id = @season_id
 	END
 
 	RETURN

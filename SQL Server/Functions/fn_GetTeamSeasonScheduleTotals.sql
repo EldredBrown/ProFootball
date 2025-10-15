@@ -14,13 +14,16 @@ GO
 --	*	Added logic to prevent DivisionByZero exceptions
 --	2017-01-05	Eldred Brown
 --	*	Added parameter to restrict results to a single season
---	2025-10-02	Eldred Brown	Changed variable names to snake_case to make more Pythonic
+--	2025-10-02	Eldred Brown
+--	*	Changed variable names to snake_case to make more Pythonic
+--	2025-10-14	Eldred Brown
+--	*	Referenced team and season data by id, not by name or year
 -- =============================================
 CREATE FUNCTION dbo.fn_GetTeamSeasonScheduleTotals
 (	
 	-- Add the parameters for the function here
-	@team_name varchar(50),
-	@season_year smallint
+	@team_id int,
+	@season_id int
 )
 RETURNS @tbl TABLE
 (
@@ -60,8 +63,8 @@ BEGIN
 			SUM(tssd.weighted_games) AS schedule_games,
 			SUM(tssd.weighted_points_for) AS schedule_points_for,
 			SUM(tssd.weighted_points_against) AS schedule_points_against
-		FROM dbo.fn_GetTeamSeasonScheduleProfile(@team_name, @season_year) AS tssp
-			INNER JOIN dbo.fn_GetTeamSeasonScheduleData(@team_name, @season_year) AS tssd
+		FROM dbo.fn_GetTeamSeasonScheduleProfile(@team_id, @season_id) AS tssp
+			INNER JOIN dbo.fn_GetTeamSeasonScheduleData(@team_id, @season_id) AS tssd
 				ON tssp.opponent = tssd.opponent
 	END
 

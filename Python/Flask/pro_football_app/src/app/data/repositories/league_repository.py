@@ -42,7 +42,7 @@ class LeagueRepository:
         """
         Gets the league in the data store with the specified id.
 
-        :param short_name: The short_name of the league to fetch.
+        :param short_name: The year of the league to fetch.
 
         :return: The fetched league.
         """

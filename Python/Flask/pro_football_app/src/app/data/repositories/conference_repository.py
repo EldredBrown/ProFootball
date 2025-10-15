@@ -42,7 +42,7 @@ class ConferenceRepository:
         """
         Gets the conference in the data store with the specified id.
 
-        :param short_name: The short_name of the conference to fetch.
+        :param short_name: The year of the conference to fetch.
 
         :return: The fetched conference.
         """

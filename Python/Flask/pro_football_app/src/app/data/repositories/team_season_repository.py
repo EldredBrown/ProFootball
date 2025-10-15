@@ -1,5 +1,9 @@
-from app.data.db_context import DbContext
-from app.data.entities.team_season import TeamSeason
+from typing import List
+
+from sqlalchemy import exists
+
+from app.data.models.team_season import TeamSeason
+from app.data.sqla import sqla
 
 
 class TeamSeasonRepository:
@@ -7,29 +11,19 @@ class TeamSeasonRepository:
     Provides CRUD access to an external data store.
     """
 
-    def __init__(self, db_context: DbContext = None) -> None:
+    def __init__(self) -> None:
         """
         Initializes a new instance of the TeamSeasonRepository class.
-
-        :param db_context: In-memory representation of the database.
         """
-        self._db_context = db_context or DbContext()
+        pass
 
-    def get_team_seasons(self) -> iter:
+    def get_team_seasons(self) -> List[TeamSeason]:
         """
         Gets all the team_seasons in the data store.
 
         :return: A list of all fetched team_seasons.
         """
-        return self._db_context.get_entities(TeamSeason)
-
-    def get_team_seasons_by_season(self, season_year: int) -> iter:
-        """
-        Gets all the team_seasons in the data store for the specified seasons.
-
-        :return: A list of all fetched team_seasons.
-        """
-        return [team_season for team_season in self.get_team_seasons() if team_season.season_id == season_year]
+        return TeamSeason.query.all()
 
     def get_team_season(self, id: int) -> TeamSeason | None:
         """
@@ -39,25 +33,24 @@ class TeamSeasonRepository:
 
         :return: The fetched team_season.
         """
-        if self.get_team_seasons() is None:
+        team_seasons = self.get_team_seasons()
+        if len(team_seasons) == 0:
             return None
+        return TeamSeason.query.get(id)
 
-        return self._db_context.get_entity(TeamSeason, id)
-
-    def get_team_season_by_team_and_season(self, team_name: str, season_year: int) -> TeamSeason | None:
+    def get_team_season_by_team_and_season(self, team_id: int, season_id: int) -> TeamSeason | None:
         """
-        Gets the team_season in the data store with the specified team_id and season_id.
+        Gets the team_season in the data store with the specified id.
+
+        :param team_id: The team_id of the team_season to fetch.
+        :param season_id: The season_id of the team_season to fetch.
 
         :return: The fetched team_season.
         """
-        if self.get_team_seasons() is None:
+        team_seasons = self.get_team_seasons()
+        if len(team_seasons) == 0:
             return None
-
-        try:
-            return [ts for ts in self.get_team_seasons()
-                    if ts.team_id == team_name and ts.season_id == season_year][0]
-        except IndexError:
-            return None
+        return TeamSeason.query.filter_by(team_id=team_id, season_id=season_id).first()
 
     def add_team_season(self, team_season: TeamSeason) -> TeamSeason:
         """
@@ -67,8 +60,8 @@ class TeamSeasonRepository:
 
         :return: The added team_season.
         """
-        self._db_context.add_entity(team_season)
-
+        sqla.session.add(team_season)
+        sqla.session.commit()
         return team_season
 
     def add_team_seasons(self, team_seasons: tuple) -> tuple:
@@ -79,8 +72,9 @@ class TeamSeasonRepository:
 
         :return: The added team_seasons.
         """
-        self._db_context.add_entities(team_seasons)
-
+        for team_season in team_seasons:
+            sqla.session.add(team_season)
+        sqla.session.commit()
         return team_seasons
 
     def update_team_season(self, team_season: TeamSeason) -> TeamSeason | None:
@@ -91,7 +85,7 @@ class TeamSeasonRepository:
 
         :return: The updated team_season.
         """
-        if (self.get_team_seasons() is None) or (team_season is None) or (not self.team_season_exists(team_season.id)):
+        if not self.team_season_exists(team_season.id):
             return team_season
 
         team_season_to_update = self.get_team_season(team_season.id)
@@ -99,7 +93,7 @@ class TeamSeasonRepository:
         team_season_to_update.season_id = team_season.season_id
         team_season_to_update.league_id = team_season.league_id
         team_season_to_update.conference_id = team_season.conference_id
-        team_season_to_update.division_name = team_season.division_name
+        team_season_to_update.division_id = team_season.division_id
         team_season_to_update.games = team_season.games
         team_season_to_update.wins = team_season.wins
         team_season_to_update.losses = team_season.losses
@@ -116,8 +110,8 @@ class TeamSeasonRepository:
         team_season_to_update.defensive_factor = team_season.defensive_factor
         team_season_to_update.defensive_index = team_season.defensive_index
         team_season_to_update.final_expected_winning_percentage = team_season.final_expected_winning_percentage
-        self._db_context.update_entity()
-
+        sqla.session.add(team_season_to_update)
+        sqla.session.commit()
         return team_season
 
     def delete_team_season(self, id: int) -> TeamSeason | None:
@@ -128,15 +122,12 @@ class TeamSeasonRepository:
 
         :return: The deleted team_season.
         """
-        if self.get_team_seasons() is None:
+        if not self.team_season_exists(id):
             return None
 
         team_season = self.get_team_season(id)
-        if team_season is None:
-            return None
-
-        self._db_context.delete_entity(team_season)
-
+        sqla.session.delete(team_season)
+        sqla.session.commit()
         return team_season
 
     def team_season_exists(self, id: int) -> bool:
@@ -147,60 +138,4 @@ class TeamSeasonRepository:
 
         :return: True if the team_season with the specified id exists in the data store; otherwise false.
         """
-        return self.get_team_season(id) is not None
-
-    def team_season_exists_with_name_and_year(self, team_name: str, season_year: int) -> bool:
-        """
-        Checks to verify whether a specific team_season exists in the data store with the specified id and id.
-
-        :param team_name: The team_id of the team_season to verify.
-        :param season_year: The season_id of the team_season to verify.
-
-        :return: True if the team_season with the specified id and id exists in the data store; otherwise false.
-        """
-        return self.get_team_season_by_team_and_season(team_name, season_year) is not None
-
-
-if __name__ == '__main__':
-    repo = TeamSeasonRepository()
-
-    for team_season in repo.get_team_seasons():
-        repo.delete_team_season(team_season.id)
-
-    team_seasons = repo.add_team_seasons((
-        TeamSeason("Arizona Cardinals", 2022, "NFL", conference_name="NFC", division_name="NFC West"),
-        TeamSeason("Atlanta Falcons", 2022, "NFL", conference_name="NFC", division_name="NFC South"),
-        TeamSeason("Baltimore Ravens", 2022, "NFL", conference_name="AFC", division_name="AFC North"),
-        TeamSeason("Buffalo Bills", 2022, "NFL", conference_name="AFC", division_name="AFC East"),
-        TeamSeason("Carolina Panthers", 2022, "NFL", conference_name="NFC", division_name="NFC South"),
-        TeamSeason("Chicago Bears", 2022, "NFL", conference_name="NFC", division_name="NFC North"),
-        TeamSeason("Cincinnati Bengals", 2022, "NFL", conference_name="AFC", division_name="AFC North"),
-        TeamSeason("Cleveland Browns", 2022, "NFL", conference_name="AFC", division_name="AFC North"),
-        TeamSeason("Dallas Cowboys", 2022, "NFL", conference_name="NFC", division_name="NFC East"),
-        TeamSeason("Denver Broncos", 2022, "NFL", conference_name="AFC", division_name="AFC West"),
-        TeamSeason("Detroit Lions", 2022, "NFL", conference_name="NFC", division_name="NFC North"),
-        TeamSeason("Green Bay Packers", 2022, "NFL", conference_name="NFC", division_name="NFC North"),
-        TeamSeason("Houston Texans", 2022, "NFL", conference_name="AFC", division_name="AFC South"),
-        TeamSeason("Indianapolis Colts", 2022, "NFL", conference_name="AFC", division_name="AFC South"),
-        TeamSeason("Jacksonville Jaguars", 2022, "NFL", conference_name="AFC", division_name="AFC South"),
-        TeamSeason("Kansas City Chiefs", 2022, "NFL", conference_name="AFC", division_name="AFC West"),
-        TeamSeason("Las Vegas Raiders", 2022, "NFL", conference_name="AFC", division_name="AFC West"),
-        TeamSeason("Los Angeles Chargers", 2022, "NFL", conference_name="AFC", division_name="AFC West"),
-        TeamSeason("Los Angeles Rams", 2022, "NFL", conference_name="NFC", division_name="NFC West"),
-        TeamSeason("Miami Dolphins", 2022, "NFL", conference_name="AFC", division_name="AFC East"),
-        TeamSeason("Minnesota Vikings", 2022, "NFL", conference_name="NFC", division_name="NFC North"),
-        TeamSeason("New England Patriots", 2022, "NFL", conference_name="AFC", division_name="AFC East"),
-        TeamSeason("New Orleans Saints", 2022, "NFL", conference_name="NFC", division_name="NFC South"),
-        TeamSeason("New York Giants", 2022, "NFL", conference_name="NFC", division_name="NFC East"),
-        TeamSeason("New York Jets", 2022, "NFL", conference_name="AFC", division_name="AFC East"),
-        TeamSeason("Philadelphia Eagles", 2022, "NFL", conference_name="NFC", division_name="NFC East"),
-        TeamSeason("Pittsburgh Steelers", 2022, "NFL", conference_name="AFC", division_name="AFC North"),
-        TeamSeason("San Francisco 49ers", 2022, "NFL", conference_name="NFC", division_name="NFC West"),
-        TeamSeason("Seattle Seahawks", 2022, "NFL", conference_name="NFC", division_name="NFC West"),
-        TeamSeason("Tampa Bay Buccaneers", 2022, "NFL", conference_name="NFC", division_name="NFC South"),
-        TeamSeason("Tennessee Titans", 2022, "NFL", conference_name="AFC", division_name="AFC South"),
-        TeamSeason("Washington Commanders", 2022, "NFL", conference_name="NFC", division_name="NFC East")
-    ))
-
-    for team_season_from_db in repo.get_team_seasons():
-        print(team_season_from_db)
+        return sqla.session.query(exists().where(TeamSeason.id == id)).scalar()

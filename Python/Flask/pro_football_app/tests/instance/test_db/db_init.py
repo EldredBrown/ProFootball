@@ -39,7 +39,7 @@ def init_db():
         '''
         CREATE TABLE League (
             id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-            short_name TEXT UNIQUE NOT NULL,
+            year TEXT UNIQUE NOT NULL,
             long_name TEXT UNIQUE NOT NULL,
             first_season_id INTEGER NOT NULL,
             last_season_id INTEGER NULL,
@@ -54,12 +54,12 @@ def init_db():
         '''
         CREATE TABLE Conference (
             id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-            short_name TEXT UNIQUE NOT NULL,
+            year TEXT UNIQUE NOT NULL,
             long_name TEXT UNIQUE NOT NULL,
-            league_id INTEGER UNIQUE NOT NULL,
+            team_id INTEGER UNIQUE NOT NULL,
             first_season_id INTEGER NOT NULL,
             last_season_id INTEGER NULL,
-            FOREIGN KEY (league_id) REFERENCES League(id),
+            FOREIGN KEY (team_id) REFERENCES League(id),
             FOREIGN KEY (first_season_id) REFERENCES Season(id),
             FOREIGN KEY (last_season_id) REFERENCES Season(id)
         )
@@ -72,11 +72,11 @@ def init_db():
         CREATE TABLE Division (
             id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
             name TEXT UNIQUE NOT NULL,
-            league_id INTEGER NOT NULL,
+            team_id INTEGER NOT NULL,
             conference_id INTEGER NOT NULL,
             first_season_id INTEGER NOT NULL,
             last_season_id INTEGER NULL,
-            FOREIGN KEY (league_id) REFERENCES League(id),
+            FOREIGN KEY (team_id) REFERENCES League(id),
             FOREIGN KEY (conference_id) REFERENCES Conference(id),
             FOREIGN KEY (first_season_id) REFERENCES Season(id),
             FOREIGN KEY (last_season_id) REFERENCES Season(id)
@@ -121,12 +121,12 @@ def init_db():
         '''
         CREATE TABLE LeagueSeason (
             id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-            league_id INTEGER NOT NULL,
+            team_id INTEGER NOT NULL,
             season_id INTEGER NOT NULL,
             total_games INTEGER NOT NULL DEFAULT 0,
             total_points INTEGER NOT NULL DEFAULT 0,
             average_points REAL,
-            FOREIGN KEY (league_id) REFERENCES League(id),
+            FOREIGN KEY (team_id) REFERENCES League(id),
             FOREIGN KEY (season_id) REFERENCES Season(id)
         )
         '''
@@ -139,7 +139,7 @@ def init_db():
             id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
             team_id INTEGER NOT NULL,
             season_id INTEGER NOT NULL,
-            league_id INTEGER NOT NULL,
+            team_id INTEGER NOT NULL,
             conference_id INTEGER,
             division_id INTEGER,
             games INTEGER NOT NULL DEFAULT 0,
@@ -160,7 +160,7 @@ def init_db():
             final_expected_winning_percentage REAL,
             FOREIGN KEY (team_id) REFERENCES Team(id),
             FOREIGN KEY (season_id) REFERENCES Season(id),
-            FOREIGN KEY (league_id) REFERENCES League(id),
+            FOREIGN KEY (team_id) REFERENCES League(id),
             FOREIGN KEY (conference_id) REFERENCES Conference(id),
             FOREIGN KEY (division_id) REFERENCES Division(id)
         )

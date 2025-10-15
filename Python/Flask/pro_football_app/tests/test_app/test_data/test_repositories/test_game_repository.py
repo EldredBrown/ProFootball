@@ -1,323 +1,251 @@
-from unittest.mock import Mock
+import pytest
 
-from app.data.db_context import DbContext
-from app.data.entities.game import Game
+from unittest.mock import patch, call
+
+from app import create_app
+from app.data.models.game import Game
+from app.data.models.league_season import LeagueSeason
+from app.data.models.team_season import TeamSeason
 from app.data.repositories.game_repository import GameRepository
 
 
-def test_get_games_should_get_games():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        Game(id=1, season_year=2022, week=1,
-             guest_name="Buffalo Bills", guest_score=31,
-             host_name="Los Angeles Rams", host_score=10),
-        Game(id=2, season_year=2022, week=1,
-             guest_name="New Orleans Saints", guest_score=27,
-             host_name="Atlanta Falcons", host_score=26),
-        Game(id=3, season_year=2022, week=1,
-             guest_name="Cleveland Browns", guest_score=26,
-             host_name="Carolina Panthers", host_score=24)
-    ]
-
-    test_repository = GameRepository(db_context=fake_db_context)
-
+@patch('app.data.repositories.game_repository.Game')
+def test_get_games_should_get_games(fake_game):
     # Act
-    test_repository.get_games()
+    test_app = create_app()
+    with test_app.app_context():
+        test_repo = GameRepository()
+        games = test_repo.get_games()
 
     # Assert
-    fake_db_context.get_entities.assert_called_once_with(Game)
+    fake_game.query.all.assert_called_once()
+    assert games == fake_game.query.all.return_value
 
 
-def test_get_game_should_return_none_when_db_games_is_none():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = None
+@patch('app.data.repositories.game_repository.GameRepository.get_games')
+def test_get_game_when_games_is_empty_should_return_none(fake_get_games):
+    test_app = create_app()
+    with test_app.app_context():
+        # Arrange
+        games = []
+        fake_get_games.return_value = games
 
-    test_repository = GameRepository(db_context=fake_db_context)
-
-    # Act
-    game_out = test_repository.get_game(id=1)
-
-    # Assert
-    assert game_out is None
-
-
-def test_get_game_should_return_game_when_db_games_is_not_none():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        Game(id=1, season_year=2022, week=1,
-             guest_name="Buffalo Bills", guest_score=31,
-             host_name="Los Angeles Rams", host_score=10),
-        Game(id=2, season_year=2022, week=1,
-             guest_name="New Orleans Saints", guest_score=27,
-             host_name="Atlanta Falcons", host_score=26),
-        Game(id=3, season_year=2022, week=1,
-             guest_name="Cleveland Browns", guest_score=26,
-             host_name="Carolina Panthers", host_score=24)
-    ]
-
-    test_repository = GameRepository(db_context=fake_db_context)
-
-    test_game_id = 2
-
-    # Act
-    test_repository.get_game(id=test_game_id)
+        # Act
+        test_repo = GameRepository()
+        game = test_repo.get_game(id=1)
 
     # Assert
-    fake_db_context.get_entity.assert_called_once_with(Game, test_game_id)
+    assert game is None
 
 
-def test_add_game_should_add_game():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        Game(id=1, season_year=2022, week=1,
-             guest_name="Buffalo Bills", guest_score=31,
-             host_name="Los Angeles Rams", host_score=10),
-        Game(id=2, season_year=2022, week=1,
-             guest_name="New Orleans Saints", guest_score=27,
-             host_name="Atlanta Falcons", host_score=26),
-        Game(id=3, season_year=2022, week=1,
-             guest_name="Cleveland Browns", guest_score=26,
-             host_name="Carolina Panthers", host_score=24)
-    ]
+@patch('app.data.repositories.game_repository.Game')
+@patch('app.data.repositories.game_repository.GameRepository.get_games')
+def test_get_game_when_games_is_not_empty_and_game_is_not_found_should_return_none(
+        fake_get_games, fake_game
+):
+    test_app = create_app()
+    with test_app.app_context():
+        # Arrange
+        games = [
+            Game(season_id=1, week=1, guest_name="Guest1", guest_score=1, host_name="Host1", host_score=2),
+            Game(season_id=1, week=1, guest_name="Guest2", guest_score=2, host_name="Host2", host_score=1),
+            Game(season_id=1, week=1, guest_name="Guest3", guest_score=2, host_name="Host3", host_score=2),
+        ]
+        fake_get_games.return_value = games
 
-    test_repository = GameRepository(db_context=fake_db_context)
+        id = len(games) + 1
 
-    game_to_add = Game(id=4, season_year=2022, week=1,
-                       guest_name="San Francisco 49ers", guest_score=10,
-                       host_name="Chicago Bears", host_score=19)
-
-    # Act
-    game_out = test_repository.add_game(game_to_add)
+        # Act
+        test_repo = GameRepository()
+        game = test_repo.get_game(id=id)
 
     # Assert
-    fake_db_context.add_entity.assert_called_once_with(game_to_add)
-    assert game_out is game_to_add
+    fake_game.query.get.assert_called_once_with(id)
+    assert game == fake_game.query.get.return_value
 
 
-def test_add_games_should_add_games():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        Game(id=1, season_year=2022, week=1,
-             guest_name="Buffalo Bills", guest_score=31,
-             host_name="Los Angeles Rams", host_score=10),
-        Game(id=2, season_year=2022, week=1,
-             guest_name="New Orleans Saints", guest_score=27,
-             host_name="Atlanta Falcons", host_score=26),
-        Game(id=3, season_year=2022, week=1,
-             guest_name="Cleveland Browns", guest_score=26,
-             host_name="Carolina Panthers", host_score=24)
-    ]
+@patch('app.data.repositories.game_repository.Game')
+@patch('app.data.repositories.game_repository.GameRepository.get_games')
+def test_get_game_when_games_is_not_empty_and_game_is_found_should_return_game(fake_get_games, fake_game):
+    test_app = create_app()
+    with test_app.app_context():
+        # Arrange
+        games = [
+            Game(season_id=1, week=1, guest_name="Guest1", guest_score=1, host_name="Host1", host_score=2),
+            Game(season_id=1, week=1, guest_name="Guest2", guest_score=2, host_name="Host2", host_score=1),
+            Game(season_id=1, week=1, guest_name="Guest3", guest_score=2, host_name="Host3", host_score=2),
+        ]
+        fake_get_games.return_value = games
 
-    test_repository = GameRepository(db_context=fake_db_context)
+        id = len(games) - 1
 
-    games_to_add = (
-        Game(id=4, season_year=2022, week=1,
-             guest_name="San Francisco 49ers", guest_score=10,
-             host_name="Chicago Bears", host_score=19),
-        Game(id=5, season_year=2022, week=1,
-             guest_name="Pittsburgh Steelers", guest_score=23,
-             host_name="Cincinnati Bengals", host_score=20),
-        Game(id=6, season_year=2022, week=1,
-             guest_name="Philadelphia Eagles", guest_score=38,
-             host_name="Detroit Lions", host_score=35)
-    )
-
-    # Act
-    games_out = test_repository.add_games(games_to_add)
+        # Act
+        test_repo = GameRepository()
+        game = test_repo.get_game(id=id)
 
     # Assert
-    fake_db_context.add_entities.assert_called_once_with(games_to_add)
-    assert games_out is games_to_add
+    fake_game.query.get.assert_called_once_with(id)
+    assert game == fake_game.query.get.return_value
 
 
-def test_update_game_should_return_game_when_db_games_is_none():
+@patch('app.data.repositories.game_repository.sqla')
+def test_add_game_should_add_game(fake_sqla):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = None
-
-    test_repository = GameRepository(db_context=fake_db_context)
-
-    game_to_update = Game(id=1, season_year=2022, week=1,
-                          guest_name="Buffalo Bills", guest_score=31,
-                          host_name="Los Angeles Rams", host_score=10)
-
-    # Act
-    game_out = test_repository.update_game(game_to_update)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = GameRepository()
+        game_in = Game(season_id=1, week=2, guest_name="Guest4", guest_score=3, host_name="Host4", host_score=3)
+        game_out = test_repo.add_game(game_in)
 
     # Assert
-    assert game_out is game_to_update
+    fake_sqla.session.add.assert_called_once_with(game_in)
+    fake_sqla.session.commit.assert_called_once()
+    assert game_out is game_in
 
 
-def test_update_game_should_return_game_when_game_does_not_exist():
+@patch('app.data.repositories.game_repository.sqla')
+def test_add_games_when_games_arg_is_empty_should_add_no_games(fake_sqla):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        Game(id=1, season_year=2022, week=1,
-             guest_name="Buffalo Bills", guest_score=31,
-             host_name="Los Angeles Rams", host_score=10),
-        Game(id=2, season_year=2022, week=1,
-             guest_name="New Orleans Saints", guest_score=27,
-             host_name="Atlanta Falcons", host_score=26),
-        Game(id=3, season_year=2022, week=1,
-             guest_name="Cleveland Browns", guest_score=26,
-             host_name="Carolina Panthers", host_score=24)
-    ]
-    fake_db_context.get_entity.return_value = None
-
-    test_repository = GameRepository(db_context=fake_db_context)
-
-    game_to_update = Game(id=1, season_year=2022, week=1,
-                          guest_name="Buffalo Bills", guest_score=31,
-                          host_name="Los Angeles Rams", host_score=10)
-
-    # Act
-    game_out = test_repository.update_game(game_to_update)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = GameRepository()
+        games_in = ()
+        games_out = test_repo.add_games(games_in)
 
     # Assert
-    assert game_out is game_to_update
+    fake_sqla.session.add.assert_not_called()
+    fake_sqla.session.commit.assert_called_once()
+    assert games_out is games_in
 
 
-def test_update_game_should_update_and_return_game_when_db_games_is_not_none():
+@patch('app.data.repositories.game_repository.sqla')
+def test_add_games_when_games_arg_is_not_empty_should_add_games(fake_sqla):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        Game(id=1, season_year=2022, week=1,
-             guest_name="Buffalo Bills", guest_score=31,
-             host_name="Los Angeles Rams", host_score=10),
-        Game(id=2, season_year=2022, week=1,
-             guest_name="New Orleans Saints", guest_score=27,
-             host_name="Atlanta Falcons", host_score=26),
-        Game(id=3, season_year=2022, week=1,
-             guest_name="Cleveland Browns", guest_score=26,
-             host_name="Carolina Panthers", host_score=24)
-    ]
-
-    test_repository = GameRepository(db_context=fake_db_context)
-
-    game_to_update = Game(id=1, season_year=2022, week=1,
-                          guest_name="Los Angeles Rams", guest_score=10,
-                          host_name="Buffalo Bills", host_score=31)
-
-    # Act
-    game_out = test_repository.update_game(game_to_update)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = GameRepository()
+        games_in = (
+            Game(season_id=1, week=2, guest_name="Guest4", guest_score=1, host_name="Host4", host_score=2),
+            Game(season_id=1, week=2, guest_name="Guest5", guest_score=2, host_name="Host5", host_score=1),
+            Game(season_id=1, week=2, guest_name="Guest6", guest_score=2, host_name="Host6", host_score=2),
+        )
+        games_out = test_repo.add_games(games_in)
 
     # Assert
-    assert game_out is game_to_update
+    fake_sqla.session.add.assert_has_calls([
+        call(games_in[0]),
+        call(games_in[1]),
+        call(games_in[2]),
+    ])
+    fake_sqla.session.commit.assert_called_once()
+    assert games_out is games_in
 
 
-def test_delete_game_should_return_none_when_db_games_is_none():
+@patch('app.data.repositories.game_repository.sqla')
+@patch('app.data.repositories.game_repository.exists')
+def test_game_exists_should_query_database(fake_exists, fake_sqla):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = None
-
-    test_repository = GameRepository(db_context=fake_db_context)
-
-    # Act
-    game_out = test_repository.delete_game(id=1)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = GameRepository()
+        game_exists = test_repo.game_exists(id=1)
 
     # Assert
-    assert game_out is None
+    fake_exists.assert_called_once()
+    fake_exists.return_value.where.assert_called_once()
+    fake_sqla.session.query.assert_called_once_with(fake_exists.return_value.where.return_value)
+    fake_sqla.session.query.return_value.scalar.assert_called_once()
+    assert game_exists == fake_sqla.session.query.return_value.scalar.return_value
 
 
-def test_delete_game_should_return_none_when_game_is_none():
+@patch('app.data.repositories.game_repository.GameRepository.game_exists')
+def test_update_game_when_game_does_not_exist_should_return_game(fake_game_exists):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        Game(id=1, season_year=2022, week=1,
-             guest_name="Buffalo Bills", guest_score=31,
-             host_name="Los Angeles Rams", host_score=10),
-        Game(id=2, season_year=2022, week=1,
-             guest_name="New Orleans Saints", guest_score=27,
-             host_name="Atlanta Falcons", host_score=26),
-        Game(id=3, season_year=2022, week=1,
-             guest_name="Cleveland Browns", guest_score=26,
-             host_name="Carolina Panthers", host_score=24)
-    ]
-    fake_db_context.get_entity.return_value = None
+    fake_game_exists.return_value = False
 
-    test_repository = GameRepository(db_context=fake_db_context)
-
-    # Act
-    game_out = test_repository.delete_game(id=4)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = GameRepository()
+        game_to_update = Game(season_id=1, week=2, guest_name="Guest4", guest_score=1, host_name="Host4", host_score=2)
+        game_updated = test_repo.update_game(game_to_update)
 
     # Assert
-    assert game_out is None
+    fake_game_exists.assert_called_once_with(game_to_update.id)
+    assert game_updated is game_to_update
 
 
-def test_delete_game_should_remove_and_return_game_when_game_is_not_none():
+@patch('app.data.repositories.game_repository.sqla')
+@patch('app.data.repositories.game_repository.GameRepository.get_game')
+@patch('app.data.repositories.game_repository.GameRepository.game_exists')
+def test_update_game_when_game_exists_should_update_and_return_game(
+        fake_game_exists, fake_get_game, fake_sqla
+):
     # Arrange
-    fake_db_context = Mock(DbContext)
+    test_app = create_app()
+    with test_app.app_context():
+        fake_game_exists.return_value = True
+        old_game = Game(season_id=1, week=1, guest_name="Guest1", guest_score=1, host_name="Host1", host_score=2)
+        fake_get_game.return_value = old_game
 
-    game1 = Game(id=1, season_year=2022, week=1,
-                 guest_name="Buffalo Bills", guest_score=31,
-                 host_name="Los Angeles Rams", host_score=10),
-    game2 = Game(id=2, season_year=2022, week=1,
-                 guest_name="New Orleans Saints", guest_score=27,
-                 host_name="Atlanta Falcons", host_score=26),
-    game3 = Game(id=3, season_year=2022, week=1,
-                 guest_name="Cleveland Browns", guest_score=26,
-                 host_name="Carolina Panthers", host_score=24)
-    fake_db_context.get_entities.return_value = [game1, game2, game3]
-    fake_db_context.get_entity.return_value = game1
+        new_game = Game(season_id=99, week=99, guest_name="Guest99", guest_score=99, host_name="Host99", host_score=99)
 
-    test_repository = GameRepository(db_context=fake_db_context)
-
-    # Act
-    game_out = test_repository.delete_game(id=1)
+        # Act
+        test_repo = GameRepository()
+        game_updated = test_repo.update_game(new_game)
 
     # Assert
-    assert fake_db_context.delete_entity.called_once_with(game_out)
-    assert game_out is game1
+    fake_game_exists.assert_called_once_with(old_game.id)
+    fake_get_game.assert_called_once_with(old_game.id)
+    assert game_updated.season_id == new_game.season_id
+    assert game_updated.week == new_game.week
+    assert game_updated.guest_name == new_game.guest_name
+    assert game_updated.guest_score == new_game.guest_score
+    assert game_updated.host_name == new_game.host_name
+    assert game_updated.host_score == new_game.host_score
+    fake_sqla.session.add.assert_called_once_with(old_game)
+    fake_sqla.session.commit.assert_called_once()
+    assert game_updated is new_game
 
 
-def test_game_exists_should_return_true_when_game_exists():
+@patch('app.data.repositories.game_repository.GameRepository.game_exists')
+def test_delete_game_when_game_does_not_exist_should_return_none(fake_game_exists):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        Game(id=1, season_year=2022, week=1,
-             guest_name="Buffalo Bills", guest_score=31,
-             host_name="Los Angeles Rams", host_score=10),
-        Game(id=2, season_year=2022, week=1,
-             guest_name="New Orleans Saints", guest_score=27,
-             host_name="Atlanta Falcons", host_score=26),
-        Game(id=3, season_year=2022, week=1,
-             guest_name="Cleveland Browns", guest_score=26,
-             host_name="Carolina Panthers", host_score=24)
-    ]
+    fake_game_exists.return_value = False
+    id = 1
 
-    test_repository = GameRepository(db_context=fake_db_context)
-
-    # Act
-    game_exists = test_repository.game_exists(id=2)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = GameRepository()
+        game_deleted = test_repo.delete_game(id=id)
 
     # Assert
-    assert game_exists
+    fake_game_exists.assert_called_once_with(id)
+    assert game_deleted is None
 
 
-def test_game_exists_should_return_false_when_game_does_not_exist():
+@patch('app.data.repositories.game_repository.sqla')
+@patch('app.data.repositories.game_repository.GameRepository.get_game')
+@patch('app.data.repositories.game_repository.GameRepository.game_exists')
+def test_delete_game_when_game_exists_should_return_game(fake_game_exists, fake_get_game, fake_sqla):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        Game(id=1, season_year=2022, week=1,
-             guest_name="Buffalo Bills", guest_score=31,
-             host_name="Los Angeles Rams", host_score=10),
-        Game(id=2, season_year=2022, week=1,
-             guest_name="New Orleans Saints", guest_score=27,
-             host_name="Atlanta Falcons", host_score=26),
-        Game(id=3, season_year=2022, week=1,
-             guest_name="Cleveland Browns", guest_score=26,
-             host_name="Carolina Panthers", host_score=24)
-    ]
+    fake_game_exists.return_value = True
+    id = 1
 
-    test_repository = GameRepository(db_context=fake_db_context)
-
-    # Act
-    game_exists = test_repository.game_exists(id=4)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = GameRepository()
+        game_deleted = test_repo.delete_game(id=id)
 
     # Assert
-    assert game_exists
+    fake_game_exists.assert_called_once_with(id)
+    fake_get_game.assert_called_once_with(id)
+    fake_sqla.session.delete.assert_called_once_with(fake_get_game.return_value)
+    fake_sqla.session.commit.assert_called_once()
+    return game_deleted is fake_get_game.return_value

@@ -16,7 +16,7 @@ class LeagueSeason(sqla.Model):
     total_points = sqla.Column(sqla.SmallInteger, nullable=False, default=0)
     average_points = sqla.Column(sqla.Float, nullable=True)
 
-    @validates('league_id', 'season_id')
+    @validates('team_id', 'season_id')
     def validate_not_empty(self, key, value):
         if not value and value != 0:
             raise ValueError(f"{key} is required.")

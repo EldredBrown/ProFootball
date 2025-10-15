@@ -1,5 +1,9 @@
-from app.data.db_context import DbContext
-from app.data.entities.team import Team
+from typing import List
+
+from sqlalchemy import exists
+
+from app.data.models.team import Team
+from app.data.sqla import sqla
 
 
 class TeamRepository:
@@ -7,21 +11,19 @@ class TeamRepository:
     Provides CRUD access to an external data store.
     """
 
-    def __init__(self, db_context: DbContext = None) -> None:
+    def __init__(self) -> None:
         """
         Initializes a new instance of the TeamRepository class.
-
-        :param db_context: In-memory representation of the database.
         """
-        self._db_context = db_context or DbContext()
+        pass
 
-    def get_teams(self) -> iter:
+    def get_teams(self) -> List[Team]:
         """
         Gets all the teams in the data store.
 
         :return: A list of all fetched teams.
         """
-        return self._db_context.get_entities(Team)
+        return Team.query.all()
 
     def get_team(self, id: int) -> Team | None:
         """
@@ -31,10 +33,23 @@ class TeamRepository:
 
         :return: The fetched team.
         """
-        if self.get_teams() is None:
+        teams = self.get_teams()
+        if len(teams) == 0:
             return None
+        return Team.query.get(id)
 
-        return self._db_context.get_entity(Team, id)
+    def get_team_by_name(self, name: str) -> Team | None:
+        """
+        Gets the team in the data store with the specified id.
+
+        :param name: The year of the team to fetch.
+
+        :return: The fetched team.
+        """
+        teams = self.get_teams()
+        if len(teams) == 0:
+            return None
+        return Team.query.filter_by(name=name).first()
 
     def add_team(self, team: Team) -> Team:
         """
@@ -44,8 +59,8 @@ class TeamRepository:
 
         :return: The added team.
         """
-        self._db_context.add_entity(team)
-
+        sqla.session.add(team)
+        sqla.session.commit()
         return team
 
     def add_teams(self, teams: tuple) -> tuple:
@@ -56,11 +71,12 @@ class TeamRepository:
 
         :return: The added teams.
         """
-        self._db_context.add_entities(teams)
-
+        for team in teams:
+            sqla.session.add(team)
+        sqla.session.commit()
         return teams
 
-    def update_team(self, team: Team) -> Team:
+    def update_team(self, team: Team) -> Team | None:
         """
         Updates a team in the data store.
 
@@ -68,13 +84,13 @@ class TeamRepository:
 
         :return: The updated team.
         """
-        if (self.get_teams() is None) or (not self.team_exists(team.id)):
+        if not self.team_exists(team.id):
             return team
 
         team_to_update = self.get_team(team.id)
         team_to_update.name = team.name
-        self._db_context.update_entity()
-
+        sqla.session.add(team_to_update)
+        sqla.session.commit()
         return team
 
     def delete_team(self, id: int) -> Team | None:
@@ -85,15 +101,12 @@ class TeamRepository:
 
         :return: The deleted team.
         """
-        if self.get_teams() is None:
+        if not self.team_exists(id):
             return None
 
         team = self.get_team(id)
-        if team is None:
-            return None
-
-        self._db_context.delete_entity(team)
-
+        sqla.session.delete(team)
+        sqla.session.commit()
         return team
 
     def team_exists(self, id: int) -> bool:
@@ -104,50 +117,4 @@ class TeamRepository:
 
         :return: True if the team with the specified id exists in the data store; otherwise false.
         """
-        return self.get_team(id) is not None
-
-
-if __name__ == '__main__':
-    repo = TeamRepository()
-
-    for team in repo.get_teams():
-        repo.delete_team(team.id)
-
-    teams = repo.add_teams((
-        Team("Arizona Cardinals"),
-        Team("Atlanta Falcons"),
-        Team("Baltimore Ravens"),
-        Team("Buffalo Bills"),
-        Team("Carolina Panthers"),
-        Team("Chicago Bears"),
-        Team("Cincinnati Bengals"),
-        Team("Cleveland Browns"),
-        Team("Dallas Cowboys"),
-        Team("Denver Broncos"),
-        Team("Detroit Lions"),
-        Team("Green Bay Packers"),
-        Team("Houston Texans"),
-        Team("Indianapolis Colts"),
-        Team("Jacksonville Jaguars"),
-        Team("Kansas City Chiefs"),
-        Team("Las Vegas Raiders"),
-        Team("Los Angeles Chargers"),
-        Team("Los Angeles Rams"),
-        Team("Miami Dolphins"),
-        Team("Minnesota Vikings"),
-        Team("New England Patriots"),
-        Team("New Orleans Saints"),
-        Team("New York Giants"),
-        Team("New York Jets"),
-        Team("Philadelphia Eagles"),
-        Team("Pittsburgh Steelers"),
-        Team("San Francisco 49ers"),
-        Team("Seattle Seahawks"),
-        Team("Tampa Bay Buccaneers"),
-        Team("Tennessee Titans"),
-        Team("Washington Commanders"),
-    ))
-
-    teams_from_db = repo.get_teams()
-    for team in teams:
-        print(team)
+        return sqla.session.query(exists().where(Team.id == id)).scalar()

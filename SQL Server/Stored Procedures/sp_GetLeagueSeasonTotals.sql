@@ -9,13 +9,17 @@ GO
 -- Create date: 2016-12-06
 -- Description:	A procedure to compute and return the NFL's total scoring
 -- Revision History:
---	2017-03-08	Eldred Brown	Added parameter to limit results to one league and one season
---	2025-10-02	Eldred Brown	Changed variable names to snake_case to make more Pythonic
+--	2017-03-08	Eldred Brown
+--	*	Added parameter to limit results to one league and one season
+--	2025-10-02	Eldred Brown
+--	*	Changed variable names to snake_case to make more Pythonic
+--	2025-10-14	Eldred Brown
+--	*	Referenced team and season data by id, not by name or year
 -- =============================================
 CREATE PROCEDURE dbo.sp_GetLeagueSeasonTotals
 	-- Add the parameters for the stored procedure here
-	@league_name varchar(5),
-	@season_year smallint
+	@league_id int,
+	@season_id int
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -34,8 +38,8 @@ BEGIN
 	FROM
 		dbo.TeamSeason
 	WHERE
-		league_name = @league_name
+		league_id = @league_id
 		AND
-		season_year = @season_year
+		season_id = @season_id
 END
 GO

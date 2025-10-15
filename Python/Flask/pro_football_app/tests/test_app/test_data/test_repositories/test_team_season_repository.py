@@ -1,332 +1,379 @@
-from unittest.mock import Mock
+import pytest
 
-from app.data.db_context import DbContext
-from app.data.entities.team_season import TeamSeason
+from unittest.mock import patch, call
+
+from app import create_app
+from app.data.models.game import Game
+from app.data.models.league_season import LeagueSeason
+from app.data.models.team_season import TeamSeason
 from app.data.repositories.team_season_repository import TeamSeasonRepository
 
 
-def test_get_team_seasons_should_get_team_seasons():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL"),
-        TeamSeason(id=2, team_name="Team2", season_year=1920, league_name="NFL"),
-        TeamSeason(id=3, team_name="Team3", season_year=1920, league_name="NFL")
-    ]
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
-
+@patch('app.data.repositories.team_season_repository.TeamSeason')
+def test_get_team_seasons_should_get_team_seasons(fake_team_season):
     # Act
-    test_repository.get_team_seasons()
+    test_app = create_app()
+    with test_app.app_context():
+        test_repo = TeamSeasonRepository()
+        team_seasons = test_repo.get_team_seasons()
 
     # Assert
-    fake_db_context.get_entities.assert_called_once_with(TeamSeason)
+    fake_team_season.query.all.assert_called_once()
+    assert team_seasons == fake_team_season.query.all.return_value
 
 
-def test_get_team_seasons_by_season_should_get_team_seasons():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL"),
-        TeamSeason(id=2, team_name="Team2", season_year=1920, league_name="NFL"),
-        TeamSeason(id=3, team_name="Team1", season_year=1921, league_name="NFL")
-    ]
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_seasons')
+def test_get_team_season_when_team_seasons_is_empty_should_return_none(fake_get_team_seasons):
+    test_app = create_app()
+    with test_app.app_context():
+        # Arrange
+        team_seasons = []
+        fake_get_team_seasons.return_value = team_seasons
 
-    # Act
-    test_repository.get_team_seasons_by_season(1920)
-
-    # Assert
-    fake_db_context.get_entities.assert_called_once_with(TeamSeason)
-
-
-def test_get_team_season_should_return_none_when_db_team_seasons_is_none():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = None
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
-
-    # Act
-    tsa_out = test_repository.get_team_season(id=1)
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season = test_repo.get_team_season(1)
 
     # Assert
-    assert tsa_out is None
+    assert team_season is None
 
 
-def test_get_team_season_should_return_team_season_when_db_team_seasons_is_not_none():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL"),
-        TeamSeason(id=2, team_name="Team2", season_year=1920, league_name="NFL"),
-        TeamSeason(id=3, team_name="Team3", season_year=1920, league_name="NFL")
-    ]
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
+@patch('app.data.repositories.team_season_repository.TeamSeason')
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_seasons')
+def test_get_team_season_when_team_seasons_is_not_empty_and_team_season_is_not_found_should_return_none(
+        fake_get_team_seasons, fake_team_season
+):
+    test_app = create_app()
+    with test_app.app_context():
+        # Arrange
+        team_seasons = [
+            TeamSeason(team_id=1, season_id=1),
+            TeamSeason(team_id=2, season_id=1),
+            TeamSeason(team_id=1, season_id=2),
+        ]
+        fake_get_team_seasons.return_value = team_seasons
 
-    test_tsa_id = 2
+        id = len(team_seasons) + 1
 
-    # Act
-    tsa_out = test_repository.get_team_season(id=test_tsa_id)
-
-    # Assert
-    fake_db_context.get_entity.assert_called_once_with(TeamSeason, test_tsa_id)
-
-
-def test_get_team_season_by_team_and_season_should_return_none_when_db_seasons_is_none():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = None
-    test_season_repository = TeamSeasonRepository(db_context=fake_db_context)
-
-    # Act
-    tsa_out = test_season_repository.get_team_season_by_team_and_season(team_name="Team1", season_year=1920)
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season = test_repo.get_team_season(id)
 
     # Assert
-    assert tsa_out is None
+    fake_team_season.query.get.assert_called_once_with(id)
+    assert team_season == fake_team_season.query.get.return_value
 
 
-def test_get_team_season_by_team_and_season_should_return_team_season_when_db_seasons_is_not_none_and_matching_team_season_is_found():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    tsa_collection_in = [
-        TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL"),
-        TeamSeason(id=2, team_name="Team2", season_year=1920, league_name="NFL"),
-        TeamSeason(id=3, team_name="Team3", season_year=1920, league_name="NFL")
-    ]
-    fake_db_context.get_entities.return_value = tsa_collection_in
-    test_season_repository = TeamSeasonRepository(db_context=fake_db_context)
+@patch('app.data.repositories.team_season_repository.TeamSeason')
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_seasons')
+def test_get_team_season_when_team_seasons_is_not_empty_and_team_season_is_found_should_return_team_season(
+        fake_get_team_seasons, fake_team_season
+):
+    test_app = create_app()
+    with test_app.app_context():
+        # Arrange
+        team_seasons = [
+            TeamSeason(team_id=1, season_id=1),
+            TeamSeason(team_id=2, season_id=1),
+            TeamSeason(team_id=1, season_id=2),
+        ]
+        fake_get_team_seasons.return_value = team_seasons
 
-    # Act
-    tsa_out = test_season_repository.get_team_season_by_team_and_season(team_name="Team2", season_year=1920)
+        id = len(team_seasons) - 1
 
-    # Assert
-    assert tsa_out is tsa_collection_in[1]
-
-
-def test_get_team_season_by_team_and_season_should_return_none_when_db_seasons_is_not_none_and_matching_team_season_is_not_found():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL"),
-        TeamSeason(id=2, team_name="Team2", season_year=1920, league_name="NFL"),
-        TeamSeason(id=3, team_name="Team3", season_year=1920, league_name="NFL")
-    ]
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
-
-    # Act
-    tsa_out = test_repository.get_team_season_by_team_and_season(team_name="Team4", season_year=1920)
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season = test_repo.get_team_season(id)
 
     # Assert
-    assert tsa_out is None
+    fake_team_season.query.get.assert_called_once_with(id)
+    assert team_season == fake_team_season.query.get.return_value
 
 
-def test_add_team_season_should_add_team_season():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL"),
-        TeamSeason(id=2, team_name="Team2", season_year=1920, league_name="NFL"),
-        TeamSeason(id=3, team_name="Team3", season_year=1920, league_name="NFL")
-    ]
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_seasons')
+def test_get_team_season_by_league_and_season_when_team_seasons_is_empty_should_return_none(fake_get_team_seasons):
+    test_app = create_app()
+    with test_app.app_context():
+        # Arrange
+        team_seasons = []
+        fake_get_team_seasons.return_value = team_seasons
 
-    tsa_to_add = TeamSeason(id=4, team_name="Team4", season_year=1920, league_name="NFL")
-
-    # Act
-    tsa_out = test_repository.add_team_season(tsa_to_add)
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season = test_repo.get_team_season_by_team_and_season(team_id=1, season_id=1)
 
     # Assert
-    fake_db_context.add_entity.assert_called_once_with(tsa_to_add)
-    assert tsa_out is tsa_to_add
+    assert team_season is None
 
 
-def test_add_team_seasons_should_add_team_seasons():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL"),
-        TeamSeason(id=2, team_name="Team2", season_year=1920, league_name="NFL"),
-        TeamSeason(id=3, team_name="Team3", season_year=1920, league_name="NFL")
-    ]
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
+@patch('app.data.repositories.team_season_repository.TeamSeason')
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_seasons')
+def test_get_team_season_by_league_and_season_when_team_seasons_is_not_empty_and_team_season_is_not_found_should_return_none(
+        fake_get_team_seasons, fake_team_season
+):
+    test_app = create_app()
+    with test_app.app_context():
+        # Arrange
+        team_seasons = [
+            TeamSeason(team_id=1, season_id=1),
+            TeamSeason(team_id=2, season_id=1),
+            TeamSeason(team_id=1, season_id=2),
+        ]
+        fake_get_team_seasons.return_value = team_seasons
 
-    tsa_collection_to_add = (
-        TeamSeason(id=1, team_name="Team1", season_year=1921, league_name="NFL"),
-        TeamSeason(id=2, team_name="Team2", season_year=1922, league_name="NFL"),
-        TeamSeason(id=3, team_name="Team3", season_year=1923, league_name="NFL")
-    )
-
-    # Act
-    tsa_collection_out = test_repository.add_team_seasons(tsa_collection_to_add)
-
-    # Assert
-    fake_db_context.add_entities.assert_called_once_with(tsa_collection_to_add)
-    assert tsa_collection_out is tsa_collection_to_add
-
-
-def test_update_team_season_should_return_team_season_when_db_team_seasons_is_none():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = None
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
-
-    tsa_to_update = TeamSeason(id=4, team_name="Team1", season_year=1920, league_name="NFL")
-
-    # Act
-    tsa_out = test_repository.update_team_season(tsa_to_update)
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season = test_repo.get_team_season_by_team_and_season(team_id=3, season_id=3)
 
     # Assert
-    assert tsa_out is tsa_to_update
-    fake_db_context.update_entity.assert_not_called()
+    fake_team_season.query.filter_by.assert_called_once_with(team_id=3, season_id=3)
+    fake_team_season.query.filter_by.return_value.first.assert_called_once()
+    assert team_season == fake_team_season.query.filter_by.return_value.first.return_value
 
 
-def test_update_team_season_should_return_team_season_when_team_season_does_not_exist():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL"),
-        TeamSeason(id=2, team_name="Team2", season_year=1920, league_name="NFL"),
-        TeamSeason(id=3, team_name="Team3", season_year=1920, league_name="NFL")
-    ]
-    fake_db_context.get_entity.return_value = None
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
+@patch('app.data.repositories.team_season_repository.TeamSeason')
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_seasons')
+def test_get_team_season_by_league_and_season_when_team_seasons_is_not_empty_and_team_season_is_found_should_return_team_season(fake_get_team_seasons, fake_team_season):
+    test_app = create_app()
+    with test_app.app_context():
+        # Arrange
+        team_seasons = [
+            TeamSeason(team_id=1, season_id=1),
+            TeamSeason(team_id=2, season_id=1),
+            TeamSeason(team_id=1, season_id=2),
+        ]
+        fake_get_team_seasons.return_value = team_seasons
 
-    tsa_to_update = TeamSeason(id=4, team_name="Team1", season_year=1921, league_name="NFL")
-
-    # Act
-    tsa_out = test_repository.update_team_season(tsa_to_update)
-
-    # Assert
-    assert tsa_out is tsa_to_update
-    fake_db_context.update_entity.assert_not_called()
-
-
-def test_update_team_season_should_update_and_return_team_season_when_db_team_seasons_is_not_none():
-    # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL")
-    ]
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
-
-    tsa_to_update = TeamSeason(id=1, team_name="Team2", season_year=1921, league_name="NFL")
-
-    # Act
-    tsa_out = test_repository.update_team_season(tsa_to_update)
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season = test_repo.get_team_season_by_team_and_season(team_id=1, season_id=1)
 
     # Assert
-    fake_db_context.update_entity.assert_called_once()
-    assert tsa_out is tsa_to_update
+    fake_team_season.query.filter_by.assert_called_once_with(team_id=1, season_id=1)
+    fake_team_season.query.filter_by.return_value.first.assert_called_once()
+    assert team_season == fake_team_season.query.filter_by.return_value.first.return_value
 
 
-def test_delete_team_season_should_return_none_when_db_team_seasons_is_none():
+@patch('app.data.repositories.team_season_repository.sqla')
+def test_add_team_season_should_add_team_season(fake_sqla):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = None
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
-
-    # Act
-    tsa_out = test_repository.delete_team_season(id=1)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season_in = TeamSeason(team_id=3, season_id=3)
+        team_season_out = test_repo.add_team_season(team_season_in)
 
     # Assert
-    assert tsa_out is None
+    fake_sqla.session.add.assert_called_once_with(team_season_in)
+    fake_sqla.session.commit.assert_called_once()
+    assert team_season_out is team_season_in
 
 
-def test_delete_team_season_should_return_none_when_team_season_is_none():
+@patch('app.data.repositories.team_season_repository.sqla')
+def test_add_team_seasons_when_team_seasons_arg_is_empty_should_add_no_team_seasons(fake_sqla):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL"),
-        TeamSeason(id=2, team_name="Team2", season_year=1920, league_name="NFL"),
-        TeamSeason(id=3, team_name="Team3", season_year=1920, league_name="NFL")
-    ]
-    fake_db_context.get_entity.return_value = None
-
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
-
-    # Act
-    tsa_out = test_repository.delete_team_season(id=4)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_seasons_in = ()
+        team_seasons_out = test_repo.add_team_seasons(team_seasons_in)
 
     # Assert
-    assert tsa_out is None
+    fake_sqla.session.add.assert_not_called()
+    fake_sqla.session.commit.assert_called_once()
+    assert team_seasons_out is team_seasons_in
 
 
-def test_delete_team_season_should_remove_and_return_team_season_when_team_season_is_not_none():
+@patch('app.data.repositories.team_season_repository.sqla')
+def test_add_team_seasons_when_team_seasons_arg_is_not_empty_should_add_team_seasons(fake_sqla):
     # Arrange
-    fake_db_context = Mock(DbContext)
-
-    tsa1 = TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL")
-    tsa_list = [
-        tsa1,
-        TeamSeason(id=2, team_name="Team2", season_year=1920, league_name="NFL"),
-        TeamSeason(id=3, team_name="Team3", season_year=1920, league_name="NFL")
-    ]
-    fake_db_context.get_entities.return_value = tsa_list
-    fake_db_context.get_entity.return_value = tsa1
-
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
-
-    # Act
-    tsa_out = test_repository.delete_team_season(id=1)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_seasons_in = (
+            TeamSeason(team_id=3, season_id=4),
+            TeamSeason(team_id=4, season_id=3),
+            TeamSeason(team_id=4, season_id=4),
+        )
+        team_seasons_out = test_repo.add_team_seasons(team_seasons_in)
 
     # Assert
-    assert fake_db_context.delete_entity.called_once_with(tsa_out)
-    assert tsa_out is tsa1
+    fake_sqla.session.add.assert_has_calls([
+        call(team_seasons_in[0]),
+        call(team_seasons_in[1]),
+        call(team_seasons_in[2]),
+    ])
+    fake_sqla.session.commit.assert_called_once()
+    assert team_seasons_out is team_seasons_in
 
 
-def test_team_season_exists_should_return_true_when_team_season_exists():
+@patch('app.data.repositories.team_season_repository.sqla')
+@patch('app.data.repositories.team_season_repository.exists')
+def test_team_season_exists_should_query_database(fake_exists, fake_sqla):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entity.return_value = TeamSeason(id=1, team_name="Team2", season_year=1920,
-                                                         league_name="NFL")
-
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
-
-    # Act
-    tsa_exists = test_repository.team_season_exists(id=1)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season_exists = test_repo.team_season_exists(id=1)
 
     # Assert
-    assert tsa_exists
+    fake_exists.assert_called_once()
+    fake_exists.return_value.where.assert_called_once()
+    fake_sqla.session.query.assert_called_once_with(fake_exists.return_value.where.return_value)
+    fake_sqla.session.query.return_value.scalar.assert_called_once()
+    assert team_season_exists == fake_sqla.session.query.return_value.scalar.return_value
 
 
-def test_team_season_exists_should_return_false_when_team_season_does_not_exist():
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.team_season_exists')
+def test_update_team_season_when_team_season_does_not_exist_should_return_team_season(fake_team_season_exists):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entity.return_value = None
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
+    fake_team_season_exists.return_value = False
 
-    # Act
-    tsa_exists = test_repository.team_season_exists(id=1)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season_to_update = TeamSeason(
+            team_id=99,
+            season_id=99,
+            league_id=99,
+            conference_id=99,
+            division_id=99,
+            games=99,
+            wins=33,
+            losses=33,
+            ties=33,
+            winning_percentage=0.5,
+            points_for=660,
+            points_against=660,
+            expected_wins=49.5,
+            expected_losses=49.5,
+            offensive_average=20.00,
+            offensive_factor=1.000,
+            offensive_index=20.00,
+            defensive_average=20.00,
+            defensive_factor=1.000,
+            defensive_index=20.00,
+            final_expected_winning_percentage=0.500
+        )
+        team_season_updated = test_repo.update_team_season(team_season_to_update)
 
     # Assert
-    assert not tsa_exists
+    fake_team_season_exists.assert_called_once_with(team_season_to_update.id)
+    assert team_season_updated is team_season_to_update
 
 
-def test_team_season_exists_with_name_and_year_should_return_true_when_team_season_exists():
+@patch('app.data.repositories.team_season_repository.sqla')
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_season')
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.team_season_exists')
+def test_update_team_season_when_team_season_exists_should_update_and_return_team_season(
+        fake_team_season_exists, fake_get_team_season, fake_sqla
+):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL")
-    ]
+    test_app = create_app()
+    with test_app.app_context():
+        fake_team_season_exists.return_value = True
+        old_team_season = TeamSeason(
+            team_id=1,
+            season_id=1,
+            league_id=1,
+            conference_id=1,
+            division_id=1,
+            games=3,
+            wins=1,
+            losses=1,
+            ties=1,
+            winning_percentage=0.5,
+            points_for=75,
+            points_against=75,
+            expected_wins=1.5,
+            expected_losses=1.5,
+            offensive_average=25.00,
+            offensive_factor=2.000,
+            offensive_index=25.00,
+            defensive_average=25.00,
+            defensive_factor=0.500,
+            defensive_index=25.00,
+            final_expected_winning_percentage=0.750
+        )
+        fake_get_team_season.return_value = old_team_season
 
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
+        new_team_season = TeamSeason(
+            team_id=99,
+            season_id=99,
+            league_id=99,
+            conference_id=99,
+            division_id=99,
+            games=99,
+            wins=33,
+            losses=33,
+            ties=33,
+            winning_percentage=0.5,
+            points_for=660,
+            points_against=660,
+            expected_wins=49.5,
+            expected_losses=49.5,
+            offensive_average=20.00,
+            offensive_factor=1.000,
+            offensive_index=20.00,
+            defensive_average=20.00,
+            defensive_factor=1.000,
+            defensive_index=20.00,
+            final_expected_winning_percentage=0.500
+        )
 
-    # Act
-    tsa_exists = test_repository.team_season_exists_with_name_and_year("Team1", 1920)
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season_updated = test_repo.update_team_season(new_team_season)
 
     # Assert
-    assert tsa_exists
+    fake_team_season_exists.assert_called_once_with(old_team_season.id)
+    fake_get_team_season.assert_called_once_with(old_team_season.id)
+    assert team_season_updated.team_id == new_team_season.team_id
+    assert team_season_updated.season_id == new_team_season.season_id
+    fake_sqla.session.add.assert_called_once_with(old_team_season)
+    fake_sqla.session.commit.assert_called_once()
+    assert team_season_updated is new_team_season
 
 
-def test_team_season_exists_with_name_and_year_should_return_false_when_team_season_does_not_exist():
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.team_season_exists')
+def test_delete_team_season_when_team_season_does_not_exist_should_return_none(fake_team_season_exists):
     # Arrange
-    fake_db_context = Mock(DbContext)
-    fake_db_context.get_entities.return_value = [
-        TeamSeason(id=1, team_name="Team1", season_year=1920, league_name="NFL")
-    ]
-    test_repository = TeamSeasonRepository(db_context=fake_db_context)
+    fake_team_season_exists.return_value = False
+    id = 1
 
-    # Act
-    tsa_exists = test_repository.team_season_exists_with_name_and_year("Team2", 1921)
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season_deleted = test_repo.delete_team_season(id)
 
     # Assert
-    assert not tsa_exists
+    fake_team_season_exists.assert_called_once_with(id)
+    assert team_season_deleted is None
+
+
+@patch('app.data.repositories.team_season_repository.sqla')
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_season')
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.team_season_exists')
+def test_delete_team_season_when_team_season_exists_should_return_team_season(fake_team_season_exists, fake_get_team_season, fake_sqla):
+    # Arrange
+    fake_team_season_exists.return_value = True
+    id = 1
+
+    test_app = create_app()
+    with test_app.app_context():
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season_deleted = test_repo.delete_team_season(id)
+
+    # Assert
+    fake_team_season_exists.assert_called_once_with(id)
+    fake_get_team_season.assert_called_once_with(id)
+    fake_sqla.session.delete.assert_called_once_with(fake_get_team_season.return_value)
+    fake_sqla.session.commit.assert_called_once()
+    return team_season_deleted is fake_get_team_season.return_value

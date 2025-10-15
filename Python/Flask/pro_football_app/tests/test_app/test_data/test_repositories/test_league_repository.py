@@ -161,7 +161,7 @@ def test_add_league_should_add_league(fake_sqla):
         # Act
         test_repo = LeagueRepository()
         league_in = League(
-            short_name="AAFC", long_name="All-American Football Conference", first_season_id=1946, last_season_id=1949
+            short_name="AAFC", long_name="All-American Football League", first_season_id=1946, last_season_id=1949
         )
         league_out = test_repo.add_league(league_in)
 
@@ -195,14 +195,9 @@ def test_add_leagues_when_leagues_arg_is_not_empty_should_add_leagues(fake_sqla)
         # Act
         test_repo = LeagueRepository()
         leagues_in = (
-            League(
-                short_name="AAFC", long_name="All-American Football Conference",
-                first_season_id=1946, last_season_id=1949
-            ),
-            League(
-                short_name="USFL", long_name="United States Football League", first_season_id=1983, last_season_id=1985
-            ),
-            League(short_name="NFL6", long_name="National Football League 6", first_season_id=11, last_season_id=12),
+            League(short_name="D", long_name="D", first_season_id=7, last_season_id=8),
+            League(short_name="E", long_name="E", first_season_id=9, last_season_id=10),
+            League(short_name="F", long_name="F", first_season_id=11, last_season_id=12),
         )
         leagues_out = test_repo.add_leagues(leagues_in)
 
@@ -244,7 +239,7 @@ def test_update_league_when_league_does_not_exist_should_return_league(fake_leag
         # Act
         test_repo = LeagueRepository()
         league_to_update = League(
-            id=1, short_name="NFL", long_name="National Football League", first_season_id=98, last_season_id=99
+            id=1, short_name="B", long_name="B", first_season_id=98, last_season_id=99
         )
         league_updated = test_repo.update_league(league_to_update)
 
@@ -263,16 +258,17 @@ def test_update_league_when_league_exists_should_update_and_return_league(
     test_app = create_app()
     with test_app.app_context():
         fake_league_exists.return_value = True
-        new_league = League(
-            id=1, short_name="AFL", long_name="American Football League", first_season_id=98, last_season_id=99
+        old_league = League(
+            id=1, short_name="A", long_name="A", first_season_id=1, last_season_id=2
         )
-        fake_get_league.return_value = new_league
+        fake_get_league.return_value = old_league
+
+        new_league = League(
+            id=1, short_name="Z", long_name="Z", first_season_id=98, last_season_id=99
+        )
 
         # Act
         test_repo = LeagueRepository()
-        old_league = League(
-            id=1, short_name="NFL", long_name="National Football League", first_season_id=1, last_season_id=2
-        )
         league_updated = test_repo.update_league(new_league)
 
     # Assert
@@ -282,7 +278,7 @@ def test_update_league_when_league_exists_should_update_and_return_league(
     assert league_updated.long_name == new_league.long_name
     assert league_updated.first_season_id == new_league.first_season_id
     assert league_updated.last_season_id == new_league.last_season_id
-    fake_sqla.session.add.assert_called_once_with(new_league)
+    fake_sqla.session.add.assert_called_once_with(old_league)
     fake_sqla.session.commit.assert_called_once()
     assert league_updated is new_league
 

@@ -21,7 +21,7 @@ def test_validate_not_empty_when_league_id_is_none_should_raise_value_error():
 
     # Assert
     assert isinstance(err.value, ValueError)
-    assert err.value.args[0] == "league_id is required."
+    assert err.value.args[0] == "team_id is required."
 
 
 def test_validate_not_empty_when_league_id_is_zero_should_not_raise_value_error():

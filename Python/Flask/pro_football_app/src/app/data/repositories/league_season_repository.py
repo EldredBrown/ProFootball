@@ -1,5 +1,9 @@
-from app.data.db_context import DbContext
-from app.data.entities.league_season import LeagueSeason
+from typing import List
+
+from sqlalchemy import exists
+
+from app.data.models.league_season import LeagueSeason
+from app.data.sqla import sqla
 
 
 class LeagueSeasonRepository:
@@ -7,29 +11,19 @@ class LeagueSeasonRepository:
     Provides CRUD access to an external data store.
     """
 
-    def __init__(self, db_context: DbContext = None) -> None:
+    def __init__(self) -> None:
         """
         Initializes a new instance of the LeagueSeasonRepository class.
-
-        :param db_context: In-memory representation of the database.
         """
-        self._db_context = db_context or DbContext()
+        pass
 
-    def get_league_seasons(self) -> iter:
+    def get_league_seasons(self) -> List[LeagueSeason]:
         """
         Gets all the league_seasons in the data store.
 
         :return: A list of all fetched league_seasons.
         """
-        return self._db_context.get_entities(LeagueSeason)
-
-    def get_league_seasons_by_season(self, season_year: int) -> iter:
-        """
-        Gets all the league_seasons in the data store for the specified seasons.
-
-        :return: A list of all fetched league_seasons.
-        """
-        return [ls for ls in self._db_context.get_entities(LeagueSeason) if ls.season_id == season_year]
+        return LeagueSeason.query.all()
 
     def get_league_season(self, id: int) -> LeagueSeason | None:
         """
@@ -39,25 +33,24 @@ class LeagueSeasonRepository:
 
         :return: The fetched league_season.
         """
-        if self.get_league_seasons() is None:
+        league_seasons = self.get_league_seasons()
+        if len(league_seasons) == 0:
             return None
+        return LeagueSeason.query.get(id)
 
-        return self._db_context.get_entity(LeagueSeason, id)
-
-    def get_league_season_by_league_and_season(self, league_name: str, season_year: int) -> LeagueSeason | None:
+    def get_league_season_by_league_and_season(self, league_id: int, season_id: int) -> LeagueSeason | None:
         """
         Gets the league_season in the data store with the specified league_id and season_id.
 
+        :param league_id: The league_id of the league_season to fetch.
+        :param season_id: The season_id of the league_season to fetch.
+
         :return: The fetched league_season.
         """
-        if self.get_league_seasons() is None:
+        league_seasons = self.get_league_seasons()
+        if len(league_seasons) == 0:
             return None
-
-        try:
-            return [ls for ls in self.get_league_seasons()
-                    if ls.league_id == league_name and ls.season_id == season_year][0]
-        except IndexError:
-            return None
+        return LeagueSeason.query.filter_by(league_id=league_id, season_id=season_id).first()
 
     def add_league_season(self, league_season: LeagueSeason) -> LeagueSeason:
         """
@@ -67,8 +60,8 @@ class LeagueSeasonRepository:
 
         :return: The added league_season.
         """
-        self._db_context.add_entity(league_season)
-
+        sqla.session.add(league_season)
+        sqla.session.commit()
         return league_season
 
     def add_league_seasons(self, league_seasons: tuple) -> tuple:
@@ -79,11 +72,12 @@ class LeagueSeasonRepository:
 
         :return: The added league_seasons.
         """
-        self._db_context.add_entities(league_seasons)
-
+        for league_season in league_seasons:
+            sqla.session.add(league_season)
+        sqla.session.commit()
         return league_seasons
 
-    def update_league_season(self, league_season: LeagueSeason) -> LeagueSeason:
+    def update_league_season(self, league_season: LeagueSeason) -> LeagueSeason | None:
         """
         Updates a league_season in the data store.
 
@@ -91,7 +85,7 @@ class LeagueSeasonRepository:
 
         :return: The updated league_season.
         """
-        if (self.get_league_seasons() is None) or (not self.league_season_exists(league_season.id)):
+        if not self.league_season_exists(league_season.id):
             return league_season
 
         league_season_to_update = self.get_league_season(league_season.id)
@@ -100,8 +94,8 @@ class LeagueSeasonRepository:
         league_season_to_update.total_games = league_season.total_games
         league_season_to_update.total_points = league_season.total_points
         league_season_to_update.average_points = league_season.average_points
-        self._db_context.update_entity()
-
+        sqla.session.add(league_season_to_update)
+        sqla.session.commit()
         return league_season
 
     def delete_league_season(self, id: int) -> LeagueSeason | None:
@@ -112,15 +106,12 @@ class LeagueSeasonRepository:
 
         :return: The deleted league_season.
         """
-        if self.get_league_seasons() is None:
+        if not self.league_season_exists(id):
             return None
 
         league_season = self.get_league_season(id)
-        if league_season is None:
-            return None
-
-        self._db_context.delete_entity(league_season)
-
+        sqla.session.delete(league_season)
+        sqla.session.commit()
         return league_season
 
     def league_season_exists(self, id: int) -> bool:
@@ -131,16 +122,4 @@ class LeagueSeasonRepository:
 
         :return: True if the league_season with the specified id exists in the data store; otherwise false.
         """
-        return self.get_league_season(id) is not None
-
-
-if __name__ == '__main__':
-    repo = LeagueSeasonRepository()
-
-    for league_season in repo.get_league_seasons():
-        repo.delete_league_season(league_season.id)
-
-    league_season = repo.add_league_season(LeagueSeason("NFL", 2022))
-
-    league_season_from_db = repo.get_league_season(league_season.id)
-    print(league_season_from_db)
+        return sqla.session.query(exists().where(LeagueSeason.id == id)).scalar()
