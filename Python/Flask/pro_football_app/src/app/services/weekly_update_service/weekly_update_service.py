@@ -1,4 +1,4 @@
-from app.data.entities.team_season import TeamSeason
+from app.data.models.team_season import TeamSeason
 from app.data.repositories.game_repository import GameRepository
 from app.data.repositories.league_season_repository import LeagueSeasonRepository
 from app.data.repositories.league_season_totals_repository import LeagueSeasonTotalsRepository
@@ -12,6 +12,7 @@ class WeeklyUpdateService:
     """
     A service to run a weekly update of the pro football data store.
     """
+
     def __init__(self,
                  season_repository: SeasonRepository = None,
                  game_repository: GameRepository = None,
@@ -59,55 +60,58 @@ class WeeklyUpdateService:
                f"League Season Totals Repository: {self._league_season_totals_repository}," \
                f"Team Season Schedule Repository: {self._team_season_schedule_repository})"
 
-    def run_weekly_update(self, league_name: str, season_year: int) -> None:
+    def run_weekly_update(self, league_id: int, season_id: int) -> None:
         """
         Runs a weekly update of the data store.
 
-        :param season_year: The id of the seasons within which a weekly update will be run.
+        :param league_id: The league_id of the league_season within which a weekly update will be run.
+        :param season_id: The season_id of the league_season within which a weekly update will be run.
 
         :return: None
         """
         # These hard-coded values are a bit of a hack at this time, but I intend to make them selectable by the user in
         # the future.
-        self._update_league_season(league_name, season_year)
-        src_week_count = self._update_week_count(season_year)
+        self._update_league_season(league_id, season_id)
+        src_week_count = self._update_week_count(season_id)
 
         if src_week_count >= 3:
-            self._update_rankings(season_year)
+            self._update_rankings(season_id)
 
-    def _update_league_season(self, league_name: str, season_year: int) -> None:
-        league_season_totals = self._league_season_totals_repository.get_league_season_totals(league_name, season_year)
-        if (league_season_totals is None) \
-                or (league_season_totals.total_games is None) \
-                or (league_season_totals.total_points is None):
+    def _update_league_season(self, league_id: int, season_id: int) -> None:
+        league_season_totals = self._league_season_totals_repository.get_league_season_totals(league_id, season_id)
+        if (
+                league_season_totals is None
+                or league_season_totals.total_games is None
+                or league_season_totals.total_points is None
+        ):
             return
 
-        league_season = self._league_season_repository.get_league_season_by_league_and_season(league_name, season_year)
+        league_season = self._league_season_repository.get_league_season_by_league_and_season(league_id, season_id)
         if league_season is None:
             return
 
         league_season.update_games_and_points(league_season_totals.total_games, league_season_totals.total_points)
         self._league_season_repository.update_league_season(league_season)
 
-    def _update_week_count(self, season_year: int) -> int:
+    def _update_week_count(self, season_id: int) -> int:
         try:
             src_week_count = max(
-                [game.week for game in self._game_repository.get_games() if game.season_id == season_year]
+                [game.week for game in self._game_repository.get_games() if game.season_id == season_id]
             )
         except TypeError:
             return 0
         except ValueError:
             return 0
 
-        dest_season = self._season_repository.get_season_by_year(season_year)
+        dest_season = self._season_repository.get_season(season_id)
         if dest_season is not None:
             dest_season.num_of_weeks_completed = src_week_count
 
         self._season_repository.update_season(dest_season)
         return src_week_count
 
-    def _update_rankings(self, season_year: int) -> None:
-        team_seasons = self._team_season_repository.get_team_seasons_by_season(season_year)
+    def _update_rankings(self, season_id: int) -> None:
+        team_seasons = self._team_season_repository.get_team_seasons_by_season(season_id)
         if team_seasons is None:
             return
 
@@ -124,9 +128,11 @@ class WeeklyUpdateService:
         team_season_schedule_averages = \
             self._team_season_schedule_repository.get_team_season_schedule_averages(team_season.team_id,
                                                                                     team_season.season_id)
-        if (team_season_schedule_averages is None) \
-                or (team_season_schedule_averages.points_for is None) \
-                or (team_season_schedule_averages.points_against is None):
+        if (
+                team_season_schedule_averages is None
+                or team_season_schedule_averages.points_for is None
+                or team_season_schedule_averages.points_against is None
+        ):
             return
 
         league_season = self._league_season_repository.get_league_season_by_league_and_season(

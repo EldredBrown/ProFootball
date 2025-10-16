@@ -4,10 +4,10 @@ import inspect
 def auto_repr(cls):
     members = vars(cls)
 
-    if "__repr__" in members:
+    if '__repr__' in members:
         raise TypeError(f"{cls.__name__} already defines __repr__")
 
-    if "__init__" not in members:
+    if '__init__' not in members:
         raise TypeError(f"{cls.__name__} does not override __init__")
 
     sig = inspect.signature(cls.__init__)
@@ -22,16 +22,16 @@ def auto_repr(cls):
         )
 
     def synthesized_repr(self):
-        return "{typename}({kwargs})".format(
+        return '{typename}({kwargs})'.format(
             typename=type(self).__name__,
             kwargs=", ".join(
-                "{name}={value!r}".format(
+                '{name}={value!r}'.format(
                     name=name,
                     value=getattr(self, name)
                 ) for name in parameter_names
             )
         )
 
-    setattr(cls, "__repr__", synthesized_repr)
+    setattr(cls, '__repr__', synthesized_repr)
 
     return cls

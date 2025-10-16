@@ -1,6 +1,3 @@
-from decimal import Decimal
-
-from app.data.entities.team_season import TeamSeason
 from app.data.repositories.team_season_repository import TeamSeasonRepository
 
 
@@ -22,10 +19,10 @@ class GamePredictorService:
         return f"{type(self).__name__}(team_season_repository={self._team_season_repository})"
 
     def predict_game_score(self,
-                           guest_name: str, guest_season_year: int,
-                           host_name: str, host_season_year: int) -> tuple:
-        guest_season = self._team_season_repository.get_team_season_by_team_and_season(guest_name, guest_season_year)
-        host_season = self._team_season_repository.get_team_season_by_team_and_season(host_name, host_season_year)
+                           guest_id: int, guest_season_id: int,
+                           host_id: int, host_season_id: int) -> tuple:
+        guest_season = self._team_season_repository.get_team_season_by_team_and_season(guest_id, guest_season_id)
+        host_season = self._team_season_repository.get_team_season_by_team_and_season(host_id, host_season_id)
         if guest_season is None or host_season is None:
             return None, None
 

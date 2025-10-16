@@ -91,7 +91,71 @@ def test_get_team_season_when_team_seasons_is_not_empty_and_team_season_is_found
 
 
 @patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_seasons')
-def test_get_team_season_by_league_and_season_when_team_seasons_is_empty_should_return_none(fake_get_team_seasons):
+def test_get_team_seasons_by_season_when_team_seasons_is_empty_should_return_none(fake_get_team_seasons):
+    test_app = create_app()
+    with test_app.app_context():
+        # Arrange
+        team_seasons = []
+        fake_get_team_seasons.return_value = team_seasons
+
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season = test_repo.get_team_seasons_by_season(season_id=1)
+
+    # Assert
+    assert team_season is None
+
+
+@patch('app.data.repositories.team_season_repository.TeamSeason')
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_seasons')
+def test_get_team_seasons_by_season_when_team_seasons_is_not_empty_and_team_season_is_not_found_should_return_none(
+        fake_get_team_seasons, fake_team_season
+):
+    test_app = create_app()
+    with test_app.app_context():
+        # Arrange
+        team_seasons = [
+            TeamSeason(team_id=1, season_id=1),
+            TeamSeason(team_id=2, season_id=1),
+            TeamSeason(team_id=1, season_id=2),
+        ]
+        fake_get_team_seasons.return_value = team_seasons
+
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season = test_repo.get_team_seasons_by_season(season_id=3)
+
+    # Assert
+    fake_team_season.query.filter_by.assert_called_once_with(season_id=3)
+    fake_team_season.query.filter_by.return_value.fetchall.assert_called_once()
+    assert team_season == fake_team_season.query.filter_by.return_value.fetchall.return_value
+
+
+@patch('app.data.repositories.team_season_repository.TeamSeason')
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_seasons')
+def test_get_team_season_by_season_when_team_seasons_is_not_empty_and_team_season_is_found_should_return_team_season(fake_get_team_seasons, fake_team_season):
+    test_app = create_app()
+    with test_app.app_context():
+        # Arrange
+        team_seasons = [
+            TeamSeason(team_id=1, season_id=1),
+            TeamSeason(team_id=2, season_id=1),
+            TeamSeason(team_id=1, season_id=2),
+        ]
+        fake_get_team_seasons.return_value = team_seasons
+
+        # Act
+        test_repo = TeamSeasonRepository()
+        team_season = test_repo.get_team_seasons_by_season(season_id=1)
+
+    # Assert
+    fake_team_season.query.filter_by.assert_called_once_with(season_id=1)
+    fake_team_season.query.filter_by.return_value.fetchall.assert_called_once()
+    assert team_season == fake_team_season.query.filter_by.return_value.fetchall.return_value
+
+
+@patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_seasons')
+def test_get_team_season_by_team_and_season_when_team_seasons_is_empty_should_return_none(fake_get_team_seasons):
     test_app = create_app()
     with test_app.app_context():
         # Arrange
@@ -108,7 +172,7 @@ def test_get_team_season_by_league_and_season_when_team_seasons_is_empty_should_
 
 @patch('app.data.repositories.team_season_repository.TeamSeason')
 @patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_seasons')
-def test_get_team_season_by_league_and_season_when_team_seasons_is_not_empty_and_team_season_is_not_found_should_return_none(
+def test_get_team_season_by_team_and_season_when_team_seasons_is_not_empty_and_team_season_is_not_found_should_return_none(
         fake_get_team_seasons, fake_team_season
 ):
     test_app = create_app()
@@ -133,7 +197,7 @@ def test_get_team_season_by_league_and_season_when_team_seasons_is_not_empty_and
 
 @patch('app.data.repositories.team_season_repository.TeamSeason')
 @patch('app.data.repositories.team_season_repository.TeamSeasonRepository.get_team_seasons')
-def test_get_team_season_by_league_and_season_when_team_seasons_is_not_empty_and_team_season_is_found_should_return_team_season(fake_get_team_seasons, fake_team_season):
+def test_get_team_season_by_team_and_season_when_team_seasons_is_not_empty_and_team_season_is_found_should_return_team_season(fake_get_team_seasons, fake_team_season):
     test_app = create_app()
     with test_app.app_context():
         # Arrange

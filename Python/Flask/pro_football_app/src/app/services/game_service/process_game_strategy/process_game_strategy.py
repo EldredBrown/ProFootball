@@ -1,5 +1,5 @@
-from app.data.entities.game import Game
-from app.data.entities.team_season import TeamSeason
+from app.data.models.game import Game
+from app.data.models.team_season import TeamSeason
 from app.data.repositories.team_season_repository import TeamSeasonRepository
 from app.services.utilities import guard
 
@@ -33,8 +33,8 @@ class ProcessGameStrategy:
         guard.raise_if_none(game, f"{type(self).__name__}.process_game: game")
 
         season_year = game.season_id
-        guest_season = self._team_season_repository.get_team_season_by_team_and_season(game.guest_id, season_year)
-        host_season = self._team_season_repository.get_team_season_by_team_and_season(game.host_id, season_year)
+        guest_season = self._team_season_repository.get_team_season_by_team_and_season(game.guest_name, season_year)
+        host_season = self._team_season_repository.get_team_season_by_team_and_season(game.host_name, season_year)
 
         self._edit_win_loss_data(guest_season, host_season, game)
         self._edit_scoring_data(guest_season, host_season, game.guest_score, game.host_score)

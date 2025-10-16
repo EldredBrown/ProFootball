@@ -11,10 +11,10 @@ class TeamSeasonScheduleAverages:
 
     def __init__(
             self,
-            points_for: Decimal = None,
-            points_against: Decimal = None,
-            schedule_points_for: Decimal = None,
-            schedule_points_against: Decimal = None
+            points_for: float = None,
+            points_against: float = None,
+            schedule_points_for: float = None,
+            schedule_points_against: float = None
     ):
         """
         Initializes a new instance of the TeamSeasonScheduleAverages class.
@@ -37,7 +37,7 @@ class TeamSeasonScheduleAverages:
                f"SPF: {self.schedule_points_for}, SPA: {self.schedule_points_against}"
 
     @property
-    def points_for(self) -> Decimal | None:
+    def points_for(self) -> float | None:
         """
         Gets the average points scored per game by a team.
 
@@ -46,7 +46,7 @@ class TeamSeasonScheduleAverages:
         return self._points_for
 
     @points_for.setter
-    def points_for(self, value: Decimal | None) -> None:
+    def points_for(self, value: float | None) -> None:
         """
         Sets the average points scored per game by a team.
 
@@ -54,13 +54,13 @@ class TeamSeasonScheduleAverages:
 
         :return: None
         """
-        if (value is not None) and (value < Decimal('0')):
+        if (value is not None) and (value < 0):
             raise ValueError("Please enter a non-negative value for points for.")
 
         self._points_for = value
 
     @property
-    def points_against(self) -> Decimal | None:
+    def points_against(self) -> float | None:
         """
         Gets the average points allowed per game by a team.
 
@@ -69,7 +69,7 @@ class TeamSeasonScheduleAverages:
         return self._points_against
 
     @points_against.setter
-    def points_against(self, value: Decimal | None) -> None:
+    def points_against(self, value: float | None) -> None:
         """
         Sets the average points allowed per game by a team.
 
@@ -77,13 +77,13 @@ class TeamSeasonScheduleAverages:
 
         :return: None
         """
-        if (value is not None) and (value < Decimal('0')):
+        if (value is not None) and (value < 0):
             raise ValueError("Please enter a non-negative value for points against.")
 
         self._points_against = value
 
     @property
-    def schedule_points_for(self) -> Decimal | None:
+    def schedule_points_for(self) -> float | None:
         """
         Gets the weighted average points scored per game by a team's opponents.
 
@@ -92,7 +92,7 @@ class TeamSeasonScheduleAverages:
         return self._schedule_points_for
 
     @schedule_points_for.setter
-    def schedule_points_for(self, value: Decimal | None) -> None:
+    def schedule_points_for(self, value: float | None) -> None:
         """
         Sets the average points scored per game by a team's opponents.
 
@@ -100,13 +100,13 @@ class TeamSeasonScheduleAverages:
 
         :return: None
         """
-        if (value is not None) and (value < Decimal('0')):
+        if (value is not None) and (value < 0):
             raise ValueError("Please enter a non-negative value for schedule points for.")
 
         self._schedule_points_for = value
 
     @property
-    def schedule_points_against(self) -> Decimal | None:
+    def schedule_points_against(self) -> float | None:
         """
         Gets the weighted average points allowed per game by a team's opponents.
 
@@ -115,7 +115,7 @@ class TeamSeasonScheduleAverages:
         return self._schedule_points_against
 
     @schedule_points_against.setter
-    def schedule_points_against(self, value: Decimal | None) -> None:
+    def schedule_points_against(self, value: float | None) -> None:
         """
         Sets the average points allowed per game by a team's opponents.
 
@@ -123,7 +123,7 @@ class TeamSeasonScheduleAverages:
 
         :return: None
         """
-        if (value is not None) and (value < Decimal('0')):
+        if (value is not None) and (value < 0):
             raise ValueError("Please enter a non-negative value for schedule points against.")
 
         self._schedule_points_against = value

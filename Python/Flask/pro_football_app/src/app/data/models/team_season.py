@@ -4,7 +4,7 @@ from sqlalchemy.orm import validates
 
 from app.data.sqla import sqla
 
-EXPONENT = Decimal('2.37')
+EXPONENT = 2.37
 
 
 class TeamSeason(sqla.Model):
@@ -68,9 +68,9 @@ class TeamSeason(sqla.Model):
         else:
             self.winning_percentage = (2 * Decimal(self.wins) + Decimal(self.ties)) / (2 * Decimal(self.games))
 
-    def update_rankings(self, team_season_schedule_average_points_for: Decimal,
-                        team_season_schedule_average_points_against: Decimal,
-                        league_season_average_points: Decimal) -> None:
+    def update_rankings(self, team_season_schedule_average_points_for: float,
+                        team_season_schedule_average_points_against: float,
+                        league_season_average_points: float) -> None:
         """
         Updates the current TeamSeason object's offensive and defensive averages, factors, and indices.
 
@@ -104,15 +104,15 @@ def calculate_expected_winning_percentage(points_for: int | Decimal, points_agai
     return divide(o, o + d)
 
 
-def divide(numerator: int | Decimal, denominator: int | Decimal) -> Decimal | None:
+def divide(numerator: int | float, denominator: int | float) -> float | None:
     if denominator == 0:
         return None
 
-    return Decimal(numerator) / Decimal(denominator)
+    return numerator / denominator
 
 
-def update_rankings(points: int, games: int, team_season_schedule_average_points: Decimal,
-                    league_season_average_points: Decimal) -> tuple[Decimal | None, Decimal | None, Decimal | None]:
+def update_rankings(points: int, games: int, team_season_schedule_average_points: float,
+                    league_season_average_points: float) -> tuple[Decimal | None, Decimal | None, Decimal | None]:
     if games == 0:
         return None, None, None
 

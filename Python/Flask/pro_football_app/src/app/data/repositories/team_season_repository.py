@@ -38,9 +38,22 @@ class TeamSeasonRepository:
             return None
         return TeamSeason.query.get(id)
 
+    def get_team_seasons_by_season(self, season_id: int) -> List[TeamSeason] | None:
+        """
+        Gets the team_seasons in the data store with the specified season_id.
+
+        :param season_id: The season_id of the team_season to fetch.
+
+        :return: The fetched team_seasons.
+        """
+        team_seasons = self.get_team_seasons()
+        if len(team_seasons) == 0:
+            return None
+        return TeamSeason.query.filter_by(season_id=season_id).fetchall()
+
     def get_team_season_by_team_and_season(self, team_id: int, season_id: int) -> TeamSeason | None:
         """
-        Gets the team_season in the data store with the specified id.
+        Gets the team_season in the data store with the specified team_id and season_id.
 
         :param team_id: The team_id of the team_season to fetch.
         :param season_id: The season_id of the team_season to fetch.
@@ -139,3 +152,15 @@ class TeamSeasonRepository:
         :return: True if the team_season with the specified id exists in the data store; otherwise false.
         """
         return sqla.session.query(exists().where(TeamSeason.id == id)).scalar()
+
+    def team_season_exists_with_team_and_season(self, team_id: int, season_id: int) -> bool:
+        """
+        Checks to verify whether a specific team_season exists in the data store.
+
+        :param id: The id of the team_season to verify.
+
+        :return: True if the team_season with the specified id exists in the data store; otherwise false.
+        """
+        return sqla.session.query(
+            exists().where(TeamSeason.team_id == team_id and TeamSeason.season_id == season_id)
+        ).scalar()

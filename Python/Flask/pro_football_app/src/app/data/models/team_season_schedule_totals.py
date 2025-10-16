@@ -17,7 +17,7 @@ class TeamSeasonScheduleTotals:
             schedule_wins: int = None,
             schedule_losses: int = None,
             schedule_ties: int = None,
-            schedule_winning_percentage: Decimal = None,
+            schedule_winning_percentage: float = None,
             schedule_games: int = None,
             schedule_points_for: int = None,
             schedule_points_against: int = None

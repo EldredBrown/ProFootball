@@ -1,5 +1,6 @@
-from app.data.entities.game import Game
+from app import create_app
 from app.data.errors import EntityNotFoundError
+from app.data.models.game import Game
 from app.data.repositories.game_repository import GameRepository
 from app.data.repositories.team_season_repository import TeamSeasonRepository
 from app.services.constants import Direction
@@ -48,10 +49,10 @@ class GameService:
         guard.raise_if_none(new_game, f"{type(self).__name__}.add_game: new_game")
 
         if not (
-            self._team_season_repository.team_season_exists_with_name_and_year(new_game.guest_id,
-                                                                               new_game.season_id)
-            or self._team_season_repository.team_season_exists_with_name_and_year(new_game.host_id,
-                                                                                  new_game.season_id)
+            self._team_season_repository.team_season_exists_with_team_and_season(new_game.guest_name,
+                                                                                 new_game.season_id)
+            or self._team_season_repository.team_season_exists_with_team_and_season(new_game.host_name,
+                                                                                    new_game.season_id)
         ):
             raise EntityNotFoundError()
 
@@ -73,6 +74,11 @@ class GameService:
         """
         guard.raise_if_none(new_game, f"{type(self).__name__}.edit_game: new_game")
         guard.raise_if_none(old_game, f"{type(self).__name__}.edit_game: old_game")
+
+        selected_game = self._game_repository.get_game(old_game.id)
+        if selected_game is None:
+            raise EntityNotFoundError(
+                f"{type(self).__name__}.edit_game: A game with id={id} could not be found.")
 
         new_game.decide_winner_and_loser()
         self._game_repository.update_game(new_game)
@@ -104,85 +110,92 @@ class GameService:
 
 
 if __name__ == '__main__':
-    service = GameService()
+    from app.data.models.league_season import LeagueSeason
 
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Dallas Cowboys", guest_score=29,
-             host_name="Tampa Bay Buccaneers", host_score=31)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Philadelphia Eagles", guest_score=32,
-             host_name="Atlanta Falcons", host_score=6)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Pittsburgh Steelers", guest_score=23,
-             host_name="Buffalo Bills", host_score=16)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="New York Jets", guest_score=14,
-             host_name="Carolina Panthers", host_score=19)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Minnesota Vikings", guest_score=24,
-             host_name="Cincinnati Bengals", host_score=27, notes="OT")
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Seattle Seahawks", guest_score=28,
-             host_name="Indianapolis Colts", host_score=16)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="San Francisco 49ers", guest_score=41,
-             host_name="Detroit Lions", host_score=33)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Jacksonville Jaguars", guest_score=21,
-             host_name="Houston Texans", host_score=37)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Arizona Cardinals", guest_score=38,
-             host_name="Tennessee Titans", host_score=13)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Los Angeles Chargers", guest_score=20,
-             host_name="Washington Football Team", host_score=16)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Cleveland Browns", guest_score=29,
-             host_name="Kansas City Chiefs", host_score=33)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Green Bay Packers", guest_score=3,
-             host_name="New Orleans Saints", host_score=38)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Miami Dolphins", guest_score=17,
-             host_name="New England Patriots", host_score=16)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Denver Broncos", guest_score=27,
-             host_name="New York Giants", host_score=13)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Chicago Bears", guest_score=14,
-             host_name="Los Angeles Rams", host_score=34)
-    )
-    service.add_game(
-        Game(season_year=2022, week=1,
-             guest_name="Baltimore Ravens", guest_score=27,
-             host_name="Las Vegas Raiders", host_score=33, notes="OT")
-    )
+    app = create_app()
+    with app.app_context():
+        game_repository = GameRepository()
+        team_season_repository = TeamSeasonRepository()
+        process_game_strategy_factory = ProcessGameStrategyFactory()
+        service = GameService(game_repository, team_season_repository, process_game_strategy_factory)
+
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Dallas Cowboys", guest_score=29,
+                 host_name="Tampa Bay Buccaneers", host_score=31)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Philadelphia Eagles", guest_score=32,
+                 host_name="Atlanta Falcons", host_score=6)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Pittsburgh Steelers", guest_score=23,
+                 host_name="Buffalo Bills", host_score=16)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="New York Jets", guest_score=14,
+                 host_name="Carolina Panthers", host_score=19)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Minnesota Vikings", guest_score=24,
+                 host_name="Cincinnati Bengals", host_score=27, notes="OT")
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Seattle Seahawks", guest_score=28,
+                 host_name="Indianapolis Colts", host_score=16)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="San Francisco 49ers", guest_score=41,
+                 host_name="Detroit Lions", host_score=33)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Jacksonville Jaguars", guest_score=21,
+                 host_name="Houston Texans", host_score=37)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Arizona Cardinals", guest_score=38,
+                 host_name="Tennessee Titans", host_score=13)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Los Angeles Chargers", guest_score=20,
+                 host_name="Washington Football Team", host_score=16)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Cleveland Browns", guest_score=29,
+                 host_name="Kansas City Chiefs", host_score=33)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Green Bay Packers", guest_score=3,
+                 host_name="New Orleans Saints", host_score=38)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Miami Dolphins", guest_score=17,
+                 host_name="New England Patriots", host_score=16)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Denver Broncos", guest_score=27,
+                 host_name="New York Giants", host_score=13)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Chicago Bears", guest_score=14,
+                 host_name="Los Angeles Rams", host_score=34)
+        )
+        service.add_game(
+            Game(season_id=103, week=1,
+                 guest_name="Baltimore Ravens", guest_score=27,
+                 host_name="Las Vegas Raiders", host_score=33, notes="OT")
+        )

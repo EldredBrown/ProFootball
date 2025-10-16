@@ -4,9 +4,9 @@ import pytest
 
 import unittest
 
-from app.data.entities.game import Game
-from app.data.entities.team_season import TeamSeason
 from app.data.errors import EntityNotFoundError
+from app.data.models.game import Game
+from app.data.models.team_season import TeamSeason
 from app.services.game_service.game_service import GameService
 
 from test_app.test_services.database_setup import \

@@ -1,7 +1,6 @@
-from app.data.db_context import DbContext
-from app.data.entities.team_season_schedule_averages import TeamSeasonScheduleAverages
-from app.data.entities.team_season_schedule_totals import TeamSeasonScheduleTotals
-from app.data.base import engine
+from app.data.models.team_season_schedule_averages import TeamSeasonScheduleAverages
+from app.data.models.team_season_schedule_totals import TeamSeasonScheduleTotals
+from app.data.sqla import sqla
 
 
 class TeamSeasonScheduleRepository:
@@ -9,29 +8,28 @@ class TeamSeasonScheduleRepository:
     Provides CRUD access to a data store.
     """
 
-    def __init__(self, db_context: DbContext = None) -> None:
+    def __init__(self) -> None:
         """
         Initializes a new instance of the TeamSeasonScheduleRepository class.
 
         :param db_context: In-memory representation of the database.
         """
-        self._db_context = db_context or DbContext()
+        pass
 
-    def get_team_season_schedule_totals(self, team_name: str, season_year: int) -> TeamSeasonScheduleTotals:
+    def get_team_season_schedule_totals(self, team_id: int, season_id: int) -> TeamSeasonScheduleTotals:
         """
         Gets the TeamSeasonScheduleTotals in the data store with the specified team_id and season_id.
 
-        :param team_name: The id of the team for which this TeamSeasonScheduleTotals will be fetched.
-        :param season_year: The id of the seasons for which this TeamSeasonScheduleTotals will be fetched.
+        :param team_id: The id of the team for which this TeamSeasonScheduleTotals will be fetched.
+        :param season_id: The id of the seasons for which this TeamSeasonScheduleTotals will be fetched.
 
         :return: The fetched TeamSeasonScheduleTotals.
         """
-        with engine.connect() as connection:
-            statement = f"CALL get_team_season_schedule_totals('{team_name}', {season_year});"
-            self._db_context.execute_query(statement, connection)
+        statement = f"CALL sp_GetTeamSeasonScheduleTotals('{team_id}', {season_id});"
+        totals = sqla.session.execute(statement).first()
 
-            statement = "SELECT * FROM team_season_schedule_totals;"
-            totals = self._db_context.execute_query(statement, connection).first()
+        # statement = "SELECT * FROM fn_GetTeamSeasonScheduleTotals;"
+        # totals = sqla.session.execute(statement).first()
 
         if totals is None:
             return TeamSeasonScheduleTotals()
@@ -49,33 +47,33 @@ class TeamSeasonScheduleRepository:
             schedule_points_against=totals[9]
         )
 
-    def get_team_season_schedule_averages(self, team_name: str, season_year: int) -> TeamSeasonScheduleAverages:
+    def get_team_season_schedule_averages(self, team_id: int, season_id: int) -> TeamSeasonScheduleAverages:
         """
         Gets the TeamSeasonScheduleAverages in the data store with the specified team_id and season_id.
 
-        :param team_name: The id of the team for which this TeamSeasonScheduleAverages will be fetched.
-        :param season_year: The id of the seasons for which this TeamSeasonScheduleAverages will be fetched.
+        :param team_id: The id of the team for which this TeamSeasonScheduleAverages will be fetched.
+        :param season_id: The id of the seasons for which this TeamSeasonScheduleAverages will be fetched.
 
         :return: The fetched TeamSeasonScheduleAverages.
         """
-        statement = f"CALL get_team_season_schedule_averages('{team_name}', {season_year});"
-        totals = self._db_context.execute_query(statement).first()
+        statement = f"CALL sp_GetTeamSeasonScheduleAverages('{team_id}', {season_id});"
+        averages = sqla.session.execute(statement).first()
 
-        if totals is None:
+        if averages is None:
             return TeamSeasonScheduleAverages()
 
         return TeamSeasonScheduleAverages(
-            points_for=totals[0],
-            points_against=totals[1],
-            schedule_points_for=totals[2],
-            schedule_points_against=totals[3]
+            points_for=averages[0],
+            points_against=averages[1],
+            schedule_points_for=averages[2],
+            schedule_points_against=averages[3]
         )
 
 
 if __name__ == '__main__':
     repo = TeamSeasonScheduleRepository()
 
-    team_name = 'Chicago Bears'
-    season_year = 2022
-    repo.get_team_season_schedule_totals(team_name, season_year)
-    repo.get_team_season_schedule_averages(team_name, season_year)
+    team_id = 1
+    season_id = 1
+    repo.get_team_season_schedule_totals(team_id, season_id)
+    repo.get_team_season_schedule_averages(team_id, season_id)

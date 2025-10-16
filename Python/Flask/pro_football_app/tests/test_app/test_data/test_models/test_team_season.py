@@ -114,7 +114,7 @@ def test_validate_not_empty_when_league_id_is_none_should_raise_value_error():
 
     # Assert
     assert isinstance(err.value, ValueError)
-    assert err.value.args[0] == "team_id is required."
+    assert err.value.args[0] == "league_id is required."
 
 
 def test_validate_not_empty_when_league_id_is_zero_should_not_raise_value_error():
@@ -298,9 +298,9 @@ def test_update_rankings_when_team_season_schedule_average_points_against_is_zer
     test_team_season.points_against = points_against
 
     # Act
-    team_season_schedule_average_points_for = Decimal('0')
-    team_season_schedule_average_points_against = Decimal('0')
-    league_season_average_points = Decimal('0')
+    team_season_schedule_average_points_for = 0.00
+    team_season_schedule_average_points_against = 0.00
+    league_season_average_points = 0.00
     test_team_season.update_rankings(team_season_schedule_average_points_for,
                                      team_season_schedule_average_points_against,
                                      league_season_average_points)
@@ -329,9 +329,9 @@ def test_update_rankings_when_team_season_schedule_average_points_against_is_not
     test_team_season.points_against = points_against
 
     # Act
-    team_season_schedule_average_points_for = Decimal('0')
-    team_season_schedule_average_points_against = Decimal('20')
-    league_season_average_points = Decimal('0')
+    team_season_schedule_average_points_for = 0.00
+    team_season_schedule_average_points_against = 20.00
+    league_season_average_points = 0.00
     test_team_season.update_rankings(team_season_schedule_average_points_for,
                                      team_season_schedule_average_points_against,
                                      league_season_average_points)
@@ -362,21 +362,21 @@ def test_update_rankings_when_team_season_schedule_average_points_are_not_zero_s
     test_team_season.points_against = points_against
 
     # Act
-    team_season_schedule_average_points_for = Decimal('20')
-    team_season_schedule_average_points_against = Decimal('20')
-    league_season_average_points = Decimal('0')
+    team_season_schedule_average_points_for = 20.00
+    team_season_schedule_average_points_against = 20.00
+    league_season_average_points = 0
     test_team_season.update_rankings(team_season_schedule_average_points_for,
                                      team_season_schedule_average_points_against,
                                      league_season_average_points)
 
     # Assert
-    assert test_team_season.offensive_average == Decimal(points_for) / Decimal(games)
+    assert test_team_season.offensive_average == points_for / games
     assert test_team_season.offensive_factor == \
            test_team_season.offensive_average / team_season_schedule_average_points_against
     assert test_team_season.offensive_index == \
            (test_team_season.offensive_average + test_team_season.offensive_factor * league_season_average_points) / 2
 
-    assert test_team_season.defensive_average == Decimal(points_against) / Decimal(games)
+    assert test_team_season.defensive_average == points_against / games
     assert test_team_season.defensive_factor == \
            test_team_season.defensive_average / team_season_schedule_average_points_for
     assert test_team_season.defensive_index == \

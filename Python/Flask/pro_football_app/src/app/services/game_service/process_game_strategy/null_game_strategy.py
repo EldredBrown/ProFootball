@@ -1,5 +1,5 @@
-from app.data.entities.game import Game
-from app.data.entities.team_season import TeamSeason
+from app.data.models.game import Game
+from app.data.models.team_season import TeamSeason
 from app.services.game_service.process_game_strategy.process_game_strategy import ProcessGameStrategy
 
 

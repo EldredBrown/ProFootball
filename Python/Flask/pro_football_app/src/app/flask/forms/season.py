@@ -7,9 +7,9 @@ class SeasonForm(FlaskForm):
     year = IntegerField(
         "Year",
         validators=[
-            InputRequired("Please enter a id."),
-            DataRequired("Please enter a id."),
-            NumberRange(min=1920, message="Please enter a id no earlier than 1920.")
+            InputRequired("Please enter an id."),
+            DataRequired("Please enter an id."),
+            NumberRange(min=1920, message="Please enter an id no earlier than 1920.")
         ]
     )
     num_of_weeks_scheduled = IntegerField(
