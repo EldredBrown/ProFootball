@@ -3,6 +3,9 @@ from typing import List
 from sqlalchemy import exists
 
 from app.data.models.season import Season
+from app.data.models.game import Game
+from app.data.models.team_season import TeamSeason
+from app.data.models.league_season import LeagueSeason
 from app.data.sqla import sqla
 
 

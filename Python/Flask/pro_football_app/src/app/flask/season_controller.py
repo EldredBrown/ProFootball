@@ -16,7 +16,7 @@ def index():
 
 
 @blueprint.route('/details/<int:id>')
-def details(id):
+def details(id: int):
     try:
         delete_season_form = DeleteSeasonForm()
         season = season_repository.get_season(id)
@@ -28,7 +28,6 @@ def details(id):
 @blueprint.route('/create', methods=['GET', 'POST'])
 def create():
     form = NewSeasonForm()
-
     if form.validate_on_submit():
         season = Season(
             year=int(form.year.data),
@@ -46,7 +45,7 @@ def create():
 
 
 @blueprint.route('/edit/<int:id>', methods=['GET', 'POST'])
-def edit(id):
+def edit(id: int):
     season = season_repository.get_season(id)
     if season:
         form = EditSeasonForm()
@@ -75,7 +74,7 @@ def edit(id):
 
 
 @blueprint.route('/delete/<int:id>', methods=['GET', 'POST'])
-def delete(id):
+def delete(id: int):
     season = season_repository.get_season(id)
     try:
         if request.method == 'POST':

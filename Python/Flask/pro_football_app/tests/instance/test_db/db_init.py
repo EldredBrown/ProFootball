@@ -139,7 +139,7 @@ def init_db():
             id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
             team_id INTEGER NOT NULL,
             season_id INTEGER NOT NULL,
-            team_id INTEGER NOT NULL,
+            league_id INTEGER NOT NULL,
             conference_id INTEGER,
             division_id INTEGER,
             games INTEGER NOT NULL DEFAULT 0,

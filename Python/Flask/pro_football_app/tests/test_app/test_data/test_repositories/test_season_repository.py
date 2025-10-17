@@ -1,8 +1,7 @@
-import pytest
-
 from unittest.mock import patch, call
 
 from test_app import create_app
+
 from app.data.models.season import Season
 from app.data.models.game import Game
 from app.data.models.league_season import LeagueSeason

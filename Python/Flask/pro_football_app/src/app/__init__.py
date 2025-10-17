@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_migrate import Migrate
 
-from src.app.data.sqla import sqla
+from app.data.sqla import sqla
 
 
 def create_app():
